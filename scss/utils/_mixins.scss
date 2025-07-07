@@ -1,0 +1,13 @@
+@mixin flex-center($justify: center, $align: center, $direction: row, $wrap: wrap) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+}
+
+@mixin background-responsive($nome-imagem, $position: center center) {
+  background: url("../../image/#{$nome-imagem}.jpg");
+  background-size: cover;
+  background-position: $position;
+}

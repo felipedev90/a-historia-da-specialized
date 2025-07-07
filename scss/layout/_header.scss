@@ -1,0 +1,15 @@
+@use "../utils/variables";
+@use "../utils/mixins";
+
+.header {
+  &__container {
+    height: 50vh;
+    width: 100%;
+    @include mixins.flex-center;
+    padding: variables.$spacing-sm;
+  }
+
+  &__img {
+    padding: variables.$spacing-md;
+  }
+}

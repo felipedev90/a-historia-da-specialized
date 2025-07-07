@@ -1,0 +1,51 @@
+@use "../base/fonts";
+
+/*FONTES*/
+$title-font: "hydro", arial, cursive;
+$text-font: "Roboto-condensed", arial cursive;
+
+/*CORES*/
+$cor0: #f2f2f2;
+$cor1: #808080;
+$cor2: #f21d2f;
+$cor3: #590212;
+$cor4: #27080d;
+$cor5: #0d0d0d;
+$cor6: #000000;
+
+/*TAMAHO DAS FONTES*/
+$font-xxl: 3.5rem;
+$font-xl: 2.5rem;
+$font-l: 2rem;
+$font-m: 1.5rem;
+$font-s: 1.2rem;
+
+/*ESPAÇAMENTO DE LINHA*/
+$line-height-base: 1.5;
+
+/*ESPAÇAMENTOS*/
+$spacing-xs: 4px;
+$spacing-sm: 8px;
+$spacing-md: 16px;
+$spacing-lg: 24px;
+$spacing-xl: 32px;
+$spacing-xxl: 48px;
+
+$spacing-top-bottom: 20px 0;
+$spacing-right-left: 0 5px;
+
+/*DEGRADE DAS LINHAS*/
+$gradient-linear: linear-gradient(to right, $cor2 0%, $cor5 50%, $cor2 100%);
+$gradient-radial1: radial-gradient(circle, $cor6 0%, $cor0 100%);
+$gradient-radial2: radial-gradient(circle, $cor0 20%, $cor2 300%);
+
+/*BREAKPOINTS*/
+$breakpoint-sm: 480px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+
+/*SOMBRAS*/
+$title-shadow: 0.2px 0.2px 2px $cor5;
+$text-shadow: 0.2px 0.2px 2px $cor3;
+$box-shadow1: 1px 1px 10px $cor1;
+$box-shadow2: 0.5px 0.5px 5px $cor1;
