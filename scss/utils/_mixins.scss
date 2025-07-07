@@ -7,7 +7,8 @@
 }
 
 @mixin background-responsive($nome-imagem, $position: center center) {
-  background: url("../../image/#{$nome-imagem}.jpg");
+  background: url("../../image/#{$nome-imagem}.webp");
   background-size: cover;
+  background-repeat: no-repeat;
   background-position: $position;
 }

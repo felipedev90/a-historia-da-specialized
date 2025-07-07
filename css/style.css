@@ -23,6 +23,7 @@ body {
 }
 
 /*FONTES*/
+/*BACKGROUNDS*/
 /*CORES*/
 /*TAMAHO DAS FONTES*/
 /*ESPAÇAMENTO DE LINHA*/
@@ -30,124 +31,5 @@ body {
 /*DEGRADE DAS LINHAS*/
 /*BREAKPOINTS*/
 /*SOMBRAS*/
-.nav__container {
-  height: fit-content;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  flex-wrap: wrap;
-  background-color: #000000;
-  padding: 5px 10px;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-.nav__lista {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-.nav__item {
-  font-family: "hydro", arial, cursive;
-  font-size: 2rem;
-  list-style: none;
-  padding: 5px;
-}
-.nav__link {
-  color: #f2f2f2;
-  text-decoration: none;
-  padding: 5px;
-  border-radius: 10px;
-  transition: all 0.5s ease;
-}
-.nav__link:hover {
-  background-color: #f2f2f2;
-  color: #000000;
-  text-decoration: underline;
-}
-
-.header__container {
-  height: 50vh;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  flex-wrap: wrap;
-  padding: 8px;
-}
-.header__img {
-  padding: 16px;
-}
-
-.historia__container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  flex-wrap: wrap;
-  padding-bottom: 32px;
-}
-.historia__title {
-  width: 100%;
-  font-family: "hydro", arial, cursive;
-  font-size: 2.5rem;
-  background-color: #000000;
-  color: #f2f2f2;
-  font-weight: 100;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  flex-wrap: wrap;
-  padding: 8px;
-}
-.historia__p {
-  font-family: "Roboto-condensed", arial cursive;
-  font-size: 1.5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  flex-wrap: wrap;
-  text-align: justify;
-  text-indent: 48px;
-  padding: 32px;
-}
-.historia__figura1 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  flex-wrap: wrap;
-}
-.historia__figura2 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  flex-wrap: wrap;
-}
-.historia__img1 {
-  border-radius: 20px;
-}
-.historia__img2, .historia__img3 {
-  border-radius: 20px;
-}
-.historia__figcaption {
-  font-family: "Roboto-condensed", arial cursive;
-  font-size: 1.2rem;
-  font-style: italic;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
 
 /*# sourceMappingURL=style.css.map */
