@@ -12,8 +12,14 @@
   font-style: normal;
 }
 @font-face {
-  font-family: "hydro";
-  src: url("../../fonts/hydrosquad.ttf") format("truetype");
+  font-family: "ShadowsIntoLightTwo";
+  src: url("../../fonts/ShadowsIntoLightTwo.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "PoiretOne";
+  src: url("../../fonts/PoiretOne.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -28,8 +34,132 @@ body {
 /*TAMAHO DAS FONTES*/
 /*ESPAÇAMENTO DE LINHA*/
 /*ESPAÇAMENTOS*/
-/*DEGRADE DAS LINHAS*/
-/*BREAKPOINTS*/
 /*SOMBRAS*/
+/*BREAKPOINTS*/
+.nav__container {
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border-bottom: 2px solid #590212;
+  padding: 1rem 3rem;
+}
+@media (max-width: 768px) {
+  .nav__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 480px) {
+  .nav__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+.nav__lista {
+  list-style: none;
+  font-family: "PoiretOne", arial cursive;
+  font-size: 1.2rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.nav__item {
+  padding: 8px;
+}
+.nav__link {
+  color: #0d0d0d;
+  text-decoration: none;
+  display: inline-block;
+  text-shadow: 0px 0px 0.5px #0d0d0d;
+  transition: transform 0.2s ease;
+}
+.nav__link:hover {
+  transform: scale(1.1);
+  color: #590212;
+}
+
+.destaque__container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 4rem;
+  padding: 4rem 2rem;
+  background-image: url("/image/spz_factory_racing_1024p.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+@media (max-width: 768px) {
+  .destaque__container {
+    flex-direction: column;
+    text-align: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+}
+@media (max-width: 480px) {
+  .destaque__container {
+    flex-direction: column;
+    text-align: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+}
+.destaque__texto {
+  flex: 1;
+  text-align: center;
+}
+.destaque__title {
+  font-family: "PoiretOne", arial cursive;
+  color: #f2f2f2;
+  font-weight: 900;
+  font-size: 3.5rem;
+  text-align: center;
+  padding-bottom: 1rem;
+}
+.destaque__p {
+  font-family: "PoiretOne", arial cursive;
+  color: #f2f2f2;
+  font-size: 1.5rem;
+  text-align: justify;
+  font-weight: 600;
+  padding-bottom: 2rem;
+}
+.destaque__botao {
+  text-decoration: none;
+  color: #f2f2f2;
+  background-color: #0d0d0d;
+  font-family: "Roboto-condensed", arial, cursive;
+  font-size: 1.2rem;
+  border: 2px solid #0d0d0d;
+  border-radius: 20px;
+  padding: 0.5rem 4rem;
+  box-shadow: 0.5px 0.5px 5px #808080;
+  transition: 0.3s ease;
+}
+.destaque__botao:hover {
+  color: #f21d2f;
+  background-color: #000000;
+}
+.destaque__imagem {
+  flex: 1;
+}
+.destaque__img {
+  border-radius: 5px;
+  box-shadow: 1px 1px 20px #000000;
+}
 
 /*# sourceMappingURL=style.css.map */

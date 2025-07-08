@@ -1,0 +1,80 @@
+@use "../utils/variables";
+@use "../utils/mixins";
+
+.destaque {
+  &__container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 4rem;
+    padding: 4rem 2rem;
+
+    background-image: url("/image/spz_factory_racing_1024p.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top right;
+
+    @include mixins.respond-to(md) {
+      flex-direction: column;
+      text-align: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    @include mixins.respond-to(sm) {
+      flex-direction: column;
+      text-align: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+  }
+
+  &__texto {
+    flex: 1;
+    text-align: center;
+  }
+
+  &__title {
+    font-family: variables.$font2;
+    color: variables.$cor0;
+    font-weight: 900;
+    font-size: variables.$font-xxl;
+    text-align: center;
+    padding-bottom: 1rem;
+  }
+
+  &__p {
+    font-family: variables.$font2;
+    color: variables.$cor0;
+    font-size: variables.$font-m;
+    text-align: justify;
+    font-weight: 600;
+    padding-bottom: 2rem;
+  }
+
+  &__botao {
+    text-decoration: none;
+    color: variables.$cor0;
+    background-color: variables.$cor5;
+    font-family: variables.$font3;
+    font-size: variables.$font-s;
+    border: 2px solid variables.$cor5;
+    border-radius: 20px;
+    padding: 0.5rem 4rem;
+    box-shadow: variables.$box-shadow2;
+    transition: 0.3s ease;
+  }
+
+  &__botao:hover {
+    color: variables.$cor2;
+    background-color: variables.$cor6;
+  }
+
+  &__imagem {
+    flex: 1;
+  }
+
+  &__img {
+    border-radius: 5px;
+    box-shadow: variables.$box-shadow1;
+  }
+}

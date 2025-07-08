@@ -1,3 +1,45 @@
 @use "../utils/variables";
 @use "../utils/mixins";
 
+.nav {
+  &__container {
+    height: fit-content;
+    width: 100%;
+    @include mixins.flex-center($justify: space-between);
+    border-bottom: 2px solid variables.$cor3;
+    padding: 1rem 3rem;
+
+    @include mixins.respond-to(md) {
+      @include mixins.flex-center;
+    }
+
+    @include mixins.respond-to(sm) {
+      @include mixins.flex-center;
+    }
+  }
+
+  &__lista {
+    list-style: none;
+    font-family: variables.$font2;
+    font-size: variables.$font-s;
+    font-weight: bold;
+    @include mixins.flex-center;
+  }
+
+  &__item {
+    padding: variables.$spacing-sm;
+  }
+
+  &__link {
+    color: variables.$cor5;
+    text-decoration: none;
+    display: inline-block;
+    text-shadow: variables.$title-shadow;
+    transition: transform 0.2s ease;
+  }
+
+  &__link:hover {
+    transform: scale(1.1);
+    color: variables.$cor3;
+  }
+}
