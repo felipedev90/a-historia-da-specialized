@@ -3,8 +3,10 @@
 @use "base/global";
 
 @use "layout/nav";
-@use "layout/destaque";
+@use "layout/home";
 @use "layout/historia";
+@use "layout/fundador";
+@use "layout/evolucao";
 
 @use "utils/mixins";
 @use "utils/variables";

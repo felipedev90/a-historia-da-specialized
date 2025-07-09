@@ -9,6 +9,7 @@
     border-bottom: 2px solid variables.$cor3;
     padding: 1rem 3rem;
 
+
     @include mixins.respond-to(md) {
       @include mixins.flex-center;
     }
@@ -24,6 +25,7 @@
     font-size: variables.$font-s;
     font-weight: bold;
     @include mixins.flex-center;
+
   }
 
   &__item {
@@ -35,11 +37,29 @@
     text-decoration: none;
     display: inline-block;
     text-shadow: variables.$title-shadow;
-    transition: transform 0.2s ease;
+    transition: color 0.3s ease;
+    display: inline-block;
+    position: relative;
   }
 
   &__link:hover {
-    transform: scale(1.1);
     color: variables.$cor3;
+    transform: scale(1.2);
+  }
+
+  &__link::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: variables.$cor5;
+    transition: width 0.4s;
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+  }
+
+  &__link:hover::after {
+    width: 100%;
   }
 }

@@ -1,30 +1,40 @@
 @use "../utils/variables";
 @use "../utils/mixins";
 
-.destaque {
+.home {
   &__container {
+    width: 100%;
+    max-width: 100%;
+    height: 100vh;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     gap: 4rem;
     padding: 4rem 2rem;
 
-    background-image: url("/image/spz_factory_racing_1024p.webp");
+    background-image: url("/image/header1900px.webp");
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: top right;
+    background-position: center right;
+
+    @include mixins.respond-to(lg) {
+      flex-direction: column;
+      text-align: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
 
     @include mixins.respond-to(md) {
       flex-direction: column;
-      text-align: center;
+      text-align: justify;
       flex-wrap: wrap;
-      gap: 1rem;
+      gap: 1.8rem;
     }
     @include mixins.respond-to(sm) {
       flex-direction: column;
-      text-align: center;
+      text-align: justify;
       flex-wrap: wrap;
-      gap: 1rem;
+      gap: 1.5rem;
     }
   }
 
@@ -40,6 +50,21 @@
     font-size: variables.$font-xxl;
     text-align: center;
     padding-bottom: 1rem;
+
+    @include mixins.respond-to(lg) {
+      font-size: variables.$font-xxl;
+      color: red;
+    }
+
+    @include mixins.respond-to(md) {
+      font-size: variables.$font-xl;
+      color: blue;
+    }
+
+    @include mixins.respond-to(sm) {
+      font-size: variables.$font-xl;
+      color: blueviolet;
+    }
   }
 
   &__p {
@@ -49,6 +74,18 @@
     text-align: justify;
     font-weight: 600;
     padding-bottom: 2rem;
+
+    @include mixins.respond-to(lg) {
+      color: black;
+    }
+
+    @include mixins.respond-to(md) {
+      color: blue;
+    }
+
+    @include mixins.respond-to(sm) {
+      color: blueviolet;
+    }
   }
 
   &__botao {
@@ -62,11 +99,14 @@
     padding: 0.5rem 4rem;
     box-shadow: variables.$box-shadow2;
     transition: 0.3s ease;
+    display: inline-block;
   }
 
   &__botao:hover {
     color: variables.$cor2;
     background-color: variables.$cor6;
+    transform: scale(1.05);
+    box-shadow: variables.$box-shadow2;
   }
 
   &__imagem {

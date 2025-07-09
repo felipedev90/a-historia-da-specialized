@@ -1,3 +1,64 @@
 @use "../utils/variables";
 @use "../utils/mixins";
 
+.fundador {
+  &__container {
+    @include mixins.flex-center;
+    padding: variables.$spacing-xl;
+  }
+
+  &__texto {
+    width: 80%;
+    height: fit-content;
+  }
+
+  &__title {
+    font-family: variables.$font2;
+    font-size: variables.$font-xl;
+    font-weight: bolder;
+    border-bottom: 1px solid variables.$cor6;
+    padding-bottom: variables.$spacing-sm;
+    margin-bottom: variables.$spacing-md;
+  }
+
+  &__boxquote {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    padding: variables.$spacing-md;
+    box-shadow: variables.$box-shadow2;
+    background: url("/image/fundador_spz_logo_700px.webp");
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
+  &__p {
+    width: 50%;
+    font-family: variables.$font3;
+    font-size: variables.$font-m;
+    text-indent: variables.$spacing-xxl;
+    padding-top: variables.$spacing-sm;
+    text-align: justify;
+    line-height: variables.$line-height-base;
+  }
+
+  &__imagem-citacao {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &__img {
+    border-radius: 5px;
+  }
+
+  &__blockquote {
+    font-family: variables.$font1;
+    font-size: variables.$font-m;
+    text-align: center;
+  }
+}

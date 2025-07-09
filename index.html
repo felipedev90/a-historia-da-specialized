@@ -15,11 +15,11 @@
        
 <header>
   <nav class="nav__container">
-    <img src="image/spz_logo_nav.webp" alt="Specialized_logo" class="nav__img">
+    <a href="https://www.specialized.com/br/pt" target="_blank"><img src="image/nav_logo.webp" alt="Specialized_logo" class="nav__img"></a>
       <ul class="nav__lista">
-        <li class="nav__item"><a href="#inicio" class="nav__link">Início</a></li>
-        <li class="nav__item"><a href="#historia" class="nav__link">História</a></li>
-        <li class="nav__item"><a href="#fundador" class="nav__link">O Fundador</a></li>
+        <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
+        <li class="nav__item"><a href="#historia" class="nav__link">O Início</a></li>
+        <li class="nav__item"><a href="#fundador" class="nav__link">Fundador</a></li>
         <li class="nav__item"><a href="#evolucao" class="nav__link">Evolução</a></li>
         <li class="nav__item"><a href="#curiosidades" class="nav__link">Curiosidades</a></li>
         <li class="nav__item"><a href="#fotos" class="nav__link">Fotos</a></li>
@@ -29,52 +29,98 @@
   </header>
 
   <main>
-    <section class="destaque">
-      <div class="destaque__container">
-        <div class="destaque__imagem"></div>
-        <div class="destaque__texto">
-          <h2 class="destaque__title">Tecnologia, design e velocidade. <br>Isso é Specialized.</h2>
-            <p class="destaque__p">
+    <section id="home">
+      <div class="home__container">
+        <div class="home__imagem"></div>
+        <div class="home__texto">
+          <h2 class="home__title">Tecnologia, design e velocidade. <br>Isso é Specialized.</h2>
+            <p class="home__p">
               Pensada para quem vive o ciclismo com intensidade, a Specialized une inovação de ponta, design inteligente e performance extrema.
               Nossas bicicletas e equipamentos são projetados para romper limites — da estrada à trilha, da cidade ao topo da montanha.
       
               Experimente a revolução sobre duas rodas.
             </p>
-            <a href="https://www.specialized.com/br/pt" target="_blank" class="destaque__botao">Conheça a Specialized</a>
+            <a href="https://www.specialized.com/br/pt" target="_blank" class="home__botao">Conheça a Specialized</a>
         </div>
-        
-         <!-- <div class="destaque__imagem">
-            <img src="/image/spz_header650px.webp" alt="specialized_training" class="destaque__img">
-          </div>-->
       </div>
     </section>
     
     
     
-    História
-    O início
-    A Specialized nasceu em 1974, na Califórnia, pelas mãos de Mike Sinyard — um jovem apaixonado por bicicletas. No começo, a empresa importava componentes da Itália, mas logo passou a desenvolver seus próprios produtos. O grande marco veio em 1981, com o lançamento da Stumpjumper, a primeira mountain bike produzida em massa no mundo. Desde então, a Specialized se tornou referência em inovação, qualidade e performance, acompanhando e moldando a evolução do MTB ao redor do planeta.
+    <section id="historia">
+      <div class="historia__container">
+        <div class="historia__texto">
+          <h2 class="historia__title">O início</h2>
+          <div class="historia__p">A Specialized nasceu em 1974, na Califórnia, pelas mãos de Mike Sinyard — um jovem apaixonado por bicicletas. A empresa importava componentes da Itália, mas logo passou a desenvolver seus próprios produtos. O grande marco veio em 1981, com o lançamento da Stumpjumper, a primeira mountain bike produzida em massa no mundo. Desde então, a Specialized se tornou referência em inovação, qualidade e performance, acompanhando e moldando a evolução do MTB ao redor do planeta.</div>
+          
+        </div>
+        <figure class="historia__imagem1">
+          <picture> 
+            <source media="(max-width: 480px)" srcset="image/historia_team1974_400px.webp" type="image/webp">
+            <source media="(max-width: 890px)" srcset="image/historia_team1974_600px.webp" type="image/webp">
+            <img src="image/historia_team1974_600px.webp" alt="spz_team1974" class="historia__img1">
+          </picture>
+          <figcaption class="historia__figcaption1">Mike e o time Specialized (1974)</figcaption>
+        </figure>
+      </div>
+        <figure class="historia__imagem2">
+          <picture> 
+            <source media="(max-width: 480px)" srcset="image/historia_stumpjumper1981_400px.webp" type="image/webp">
+            <source media="(max-width: 890px)" srcset="image/historia_stumpjumper1981_500px.webp" type="image/webp">
+            <img src="image/historia_stumpjumper1981_500px.webp" alt="spz_team1974" class="historia__img2">
+          </picture>
+          <picture> 
+            <source media="(max-width: 480px)" srcset="image/historia_stumpjumper1981_2_400px.webp" type="image/webp">
+            <source media="(max-width: 890px)" srcset="image/historia_stumpjumper1981_2_500px.webp" type="image/webp">
+            <img src="image/historia_stumpjumper1981_2_500px.webp" alt="spz_team1974" class="historia__img2">
+          </picture>
+        </figure>
+        <figcaption class="historia__figcaption2">Primeira Stumpjumper (1981)</figcaption>
+    </section>
     
-    ** IMAGENS
-    Equipe de desenvolvimento da Specialized em 1974
-    e a primeira StumpJumper em 1981
-    **
     
+    <section id="fundador">
+      <div class="fundador__container">
+
+        <div class="fundador__texto">
+          <h2 class="fundador__title">O Fundador: Mike Sinyard</h2>
+
+            <div class="fundador__boxquote">
+              <p class="fundador__p">Mike Sinyard fundou a Specialized com uma visão clara: oferecer as melhores bicicletas do mundo para quem ama pedalar. Mais do que um empresário, ele é um ciclista apaixonado que entendeu cedo as necessidades dos riders. Mike acreditava que uma boa bike poderia mudar a experiência de alguém com o esporte — e ele estava certo!</p>
+              <div class="fundador__imagem-citacao">
+                  <picture>
+                    <source media="(max-width: 480px)" srcset="image/historia_stumpjumper1981_400px.webp" type="image/webp">
+                    <source media="(max-width: 890px)" srcset="image/historia_stumpjumper1981_500px.webp" type="image/webp">
+                    <img src="/image/fundador_Mike_300px.webp" alt="Mike_Sinyard" class="fundador__img">
+                  </picture>
+
+                  <blockquote class="fundador__blockquote">
+                    “Somos ciclistas.
+                    Isso guia tudo o que fazemos.” <br>
+                    – Mike Sinyard
+                  </blockquote>
+              </div>
+            </div>
+          </div>
+      </div>
+    </section>
     
-    O Fundador
-    O Fundador: Mike Sinyard
-    Mike Sinyard fundou a Specialized com uma visão clara: oferecer as melhores bicicletas do mundo para quem ama pedalar. Mais do que um empresário, ele é um ciclista apaixonado que entendeu cedo as necessidades dos riders. Mike acreditava que uma boa bike poderia mudar a experiência de alguém com o esporte — e ele estava certo!
-    
-    ** IMAGEM
-    “Somos ciclistas.
-    Isso guia tudo o que fazemos.”
-    – Mike Sinyard
-    
-    
-    Evolução
-    A evolução da Specialized no Mundo do MTB
-    A Specialized não apenas acompanhou a evolução do mountain bike — ela foi protagonista. Ao longo das décadas, suas inovações influenciaram o mercado global, inspiraram atletas e elevaram o padrão de performance. Com uma abordagem centrada no ciclista e com tecnologias como FSR suspension, Future Shock, Roval wheels e carbon FACT, a marca redefine o que significa velocidade, controle e conforto sobre duas rodas.
-    Além disso, a Specialized investe fortemente em sustentabilidade, inclusão e incentivo ao uso da bike como meio de transformação social.
+    <section id="evolucao">
+      <div class="evolucao__container-img">
+          <picture>
+            <source media="(max-width: 480px)" srcset="image/historia_stumpjumper1981_400px.webp" type="image/webp">
+            <source media="(max-width: 890px)" srcset="/image/evolucao_img780px.webp" type="image/webp">
+            <img src="/image/evolucao_img780px.webp" alt="spz_rocks" class="evolucao__img">
+          </picture>
+          <h2 class="evolucao__title">A evolução da Specialized no Mundo do MTB</h2>
+      </div>
+      <div class="evolucao__container">
+        <p class="evolucao__p">
+          A Specialized não apenas acompanhou a evolução do mountain bike — ela foi protagonista. Ao longo das décadas, suas inovações influenciaram o mercado global, inspiraram atletas e elevaram o padrão de performance. Com uma abordagem centrada no ciclista e com tecnologias como <a href="https://www.youtube.com/watch?v=VgxKjk6LPyY" class="evolucao__link" target="_blank">FSR suspension</a>, <a href="https://www.youtube.com/watch?v=DMT5AWpXZiA" class="evolucao__link" target="_blank">Future Shock</a>, <a href="https://www.youtube.com/watch?v=DwNd8pMqI1o" class="evolucao__link" target="_blank">Roval wheels</a> e <a href="https://www.youtube.com/watch?v=7M8BPlEbwq8" class="evolucao__link" target="_blank">carbon FACT</a>, a marca redefine o que significa velocidade, controle e conforto sobre duas rodas.
+          Além disso, a Specialized investe fortemente em sustentabilidade, inclusão e incentivo ao uso da bike como meio de transformação social.
+        </p>
+      </div>
+    </section>
     
     
     Curiosidades sobre a marca

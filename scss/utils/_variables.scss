@@ -10,6 +10,7 @@ $font3: "Roboto-condensed", arial, cursive;
 
 
 /*CORES*/
+$cor00: transparent;
 $cor0: #f2f2f2;
 $cor1: #808080;
 $cor2: #f21d2f;
@@ -27,7 +28,7 @@ $font-s: 1.2rem;
 $font-xs: 1rem;
 
 /*ESPAÇAMENTO DE LINHA*/
-$line-height-base: 1.5;
+$line-height-base: 1.2;
 
 /*ESPAÇAMENTOS*/
 $spacing-xs: 4px;
@@ -44,9 +45,12 @@ $spacing-right-left: 0 5px;
 $title-shadow: 0px 0px 0.5px $cor5;
 $text-shadow: 0.2px 0.2px 2px $cor3;
 $box-shadow1: 1px 1px 20px $cor6;
-$box-shadow2: 0.5px 0.5px 5px $cor1;
+$box-shadow2: 0.5px 0.5px 5px $cor6;
 
 /*BREAKPOINTS*/
 $breakpoint-sm: 510px;
 $breakpoint-md: 890px;
 $breakpoint-lg: 1024px;
+
+$gradient-radial1: radial-gradient(circle, $cor0 0%, $cor3 100%);
+$gradient-radial2: radial-gradient(circle, $cor0 20%, $cor2 300%);

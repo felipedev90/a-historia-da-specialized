@@ -1,0 +1,30 @@
+@use "../utils/variables";
+@use "../utils/mixins";
+
+.evolucao {
+  &__container-img {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    gap: 5rem;
+    padding: 5rem 10rem;
+  }
+
+  &__title {
+    font-family: variables.$font2;
+    font-size: variables.$font-xl;
+    font-weight: bold;
+    border-bottom: 1px solid variables.$cor6;
+    padding: variables.$spacing-md;
+    text-align: center;
+  }
+
+  &__img {
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: variables.$box-shadow2;
+  }
+}

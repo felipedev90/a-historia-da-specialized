@@ -1,4 +1,64 @@
 @use "../utils/variables";
 @use "../utils/mixins";
 
+#historia {
+  padding-bottom: 2rem;
+}
 
+.historia {
+  &__container {
+    @include mixins.flex-center;
+    padding: variables.$spacing-xl;
+  }
+
+  &__texto {
+    width: 60%;
+    height: fit-content;
+  }
+
+  &__title {
+    font-family: variables.$font2;
+    font-size: variables.$font-xl;
+    font-weight: bolder;
+    border-bottom: 1px solid variables.$cor6;
+    padding-bottom: variables.$spacing-sm;
+  }
+
+  &__p {
+    font-family: variables.$font3;
+    font-size: variables.$font-m;
+    text-indent: variables.$spacing-xxl;
+    padding-top: variables.$spacing-sm;
+    text-align: justify;
+    line-height: variables.$line-height-base;
+    padding-bottom: variables.$spacing-md;
+  }
+
+  &__imagem1 {
+    @include mixins.flex-center($direction: column);
+  }
+
+  &__img1,
+  &__img2 {
+    border-radius: 4px;
+    box-shadow: variables.$box-shadow2;
+  }
+
+  &__figcaption1 {
+    font-family: variables.$font3;
+    font-style: italic;
+    padding: variables.$spacing-xs;
+  }
+
+  &__imagem2 {
+    @include mixins.flex-center;
+    gap: variables.$spacing-xl;
+  }
+
+  &__figcaption2 {
+    font-family: variables.$font3;
+    text-align: center;
+    font-style: italic;
+    padding: variables.$spacing-xs;
+  }
+}

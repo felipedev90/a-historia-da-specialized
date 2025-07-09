@@ -15,11 +15,11 @@
 
 @mixin respond-to($breakpoint) {
   @if $breakpoint == sm {
-    @media (max-width: 480px) {
+    @media (max-width: 510px) {
       @content;
     }
   } @else if $breakpoint == md {
-    @media (max-width: 768px) {
+    @media (max-width: 810px) {
       @content;
     }
   } @else if $breakpoint == lg {

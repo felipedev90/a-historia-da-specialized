@@ -47,7 +47,7 @@ body {
   border-bottom: 2px solid #590212;
   padding: 1rem 3rem;
 }
-@media (max-width: 768px) {
+@media (max-width: 810px) {
   .nav__container {
     display: flex;
     justify-content: center;
@@ -56,7 +56,7 @@ body {
     flex-wrap: wrap;
   }
 }
-@media (max-width: 480px) {
+@media (max-width: 510px) {
   .nav__container {
     display: flex;
     justify-content: center;
@@ -84,45 +84,72 @@ body {
   text-decoration: none;
   display: inline-block;
   text-shadow: 0px 0px 0.5px #0d0d0d;
-  transition: transform 0.2s ease;
+  transition: color 0.3s ease;
+  display: inline-block;
+  position: relative;
 }
 .nav__link:hover {
-  transform: scale(1.1);
   color: #590212;
+  transform: scale(1.2);
+}
+.nav__link::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #0d0d0d;
+  transition: width 0.4s;
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+}
+.nav__link:hover::after {
+  width: 100%;
 }
 
-.destaque__container {
+.home__container {
+  width: 100%;
+  max-width: 100%;
+  height: 100vh;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   gap: 4rem;
   padding: 4rem 2rem;
-  background-image: url("/image/spz_factory_racing_1024p.webp");
+  background-image: url("/image/header1900px.webp");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: top right;
+  background-position: center right;
 }
-@media (max-width: 768px) {
-  .destaque__container {
+@media (max-width: 1024px) {
+  .home__container {
     flex-direction: column;
     text-align: center;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 2rem;
   }
 }
-@media (max-width: 480px) {
-  .destaque__container {
+@media (max-width: 810px) {
+  .home__container {
     flex-direction: column;
-    text-align: center;
+    text-align: justify;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 1.8rem;
   }
 }
-.destaque__texto {
+@media (max-width: 510px) {
+  .home__container {
+    flex-direction: column;
+    text-align: justify;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+}
+.home__texto {
   flex: 1;
   text-align: center;
 }
-.destaque__title {
+.home__title {
   font-family: "PoiretOne", arial cursive;
   color: #f2f2f2;
   font-weight: 900;
@@ -130,7 +157,25 @@ body {
   text-align: center;
   padding-bottom: 1rem;
 }
-.destaque__p {
+@media (max-width: 1024px) {
+  .home__title {
+    font-size: 3.5rem;
+    color: red;
+  }
+}
+@media (max-width: 810px) {
+  .home__title {
+    font-size: 2.5rem;
+    color: blue;
+  }
+}
+@media (max-width: 510px) {
+  .home__title {
+    font-size: 2.5rem;
+    color: blueviolet;
+  }
+}
+.home__p {
   font-family: "PoiretOne", arial cursive;
   color: #f2f2f2;
   font-size: 1.5rem;
@@ -138,7 +183,22 @@ body {
   font-weight: 600;
   padding-bottom: 2rem;
 }
-.destaque__botao {
+@media (max-width: 1024px) {
+  .home__p {
+    color: black;
+  }
+}
+@media (max-width: 810px) {
+  .home__p {
+    color: blue;
+  }
+}
+@media (max-width: 510px) {
+  .home__p {
+    color: blueviolet;
+  }
+}
+.home__botao {
   text-decoration: none;
   color: #f2f2f2;
   background-color: #0d0d0d;
@@ -147,19 +207,166 @@ body {
   border: 2px solid #0d0d0d;
   border-radius: 20px;
   padding: 0.5rem 4rem;
-  box-shadow: 0.5px 0.5px 5px #808080;
+  box-shadow: 0.5px 0.5px 5px #000000;
   transition: 0.3s ease;
+  display: inline-block;
 }
-.destaque__botao:hover {
+.home__botao:hover {
   color: #f21d2f;
   background-color: #000000;
+  transform: scale(1.05);
+  box-shadow: 0.5px 0.5px 5px #000000;
 }
-.destaque__imagem {
+.home__imagem {
   flex: 1;
 }
-.destaque__img {
+.home__img {
   border-radius: 5px;
   box-shadow: 1px 1px 20px #000000;
+}
+
+#historia {
+  padding-bottom: 2rem;
+}
+
+.historia__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 32px;
+}
+.historia__texto {
+  width: 60%;
+  height: fit-content;
+}
+.historia__title {
+  font-family: "PoiretOne", arial cursive;
+  font-size: 2.5rem;
+  font-weight: bolder;
+  border-bottom: 1px solid #000000;
+  padding-bottom: 8px;
+}
+.historia__p {
+  font-family: "Roboto-condensed", arial, cursive;
+  font-size: 1.5rem;
+  text-indent: 48px;
+  padding-top: 8px;
+  text-align: justify;
+  line-height: 1.2;
+  padding-bottom: 16px;
+}
+.historia__imagem1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.historia__img1, .historia__img2 {
+  border-radius: 4px;
+  box-shadow: 0.5px 0.5px 5px #000000;
+}
+.historia__figcaption1 {
+  font-family: "Roboto-condensed", arial, cursive;
+  font-style: italic;
+  padding: 4px;
+}
+.historia__imagem2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+.historia__figcaption2 {
+  font-family: "Roboto-condensed", arial, cursive;
+  text-align: center;
+  font-style: italic;
+  padding: 4px;
+}
+
+.fundador__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 32px;
+}
+.fundador__texto {
+  width: 80%;
+  height: fit-content;
+}
+.fundador__title {
+  font-family: "PoiretOne", arial cursive;
+  font-size: 2.5rem;
+  font-weight: bolder;
+  border-bottom: 1px solid #000000;
+  padding-bottom: 8px;
+  margin-bottom: 16px;
+}
+.fundador__boxquote {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  padding: 16px;
+  box-shadow: 0.5px 0.5px 5px #000000;
+  background: url("/image/fundador_spz_logo_700px.webp");
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.fundador__p {
+  width: 50%;
+  font-family: "Roboto-condensed", arial, cursive;
+  font-size: 1.5rem;
+  text-indent: 48px;
+  padding-top: 8px;
+  text-align: justify;
+  line-height: 1.2;
+}
+.fundador__imagem-citacao {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+}
+.fundador__img {
+  border-radius: 5px;
+}
+.fundador__blockquote {
+  font-family: "ShadowsIntoLightTwo", arial, cursive;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.evolucao__container-img {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
+  gap: 5rem;
+  padding: 5rem 10rem;
+}
+.evolucao__title {
+  font-family: "PoiretOne", arial cursive;
+  font-size: 2.5rem;
+  font-weight: bold;
+  border-bottom: 1px solid #000000;
+  padding: 16px;
+  text-align: center;
+}
+.evolucao__img {
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0.5px 0.5px 5px #000000;
 }
 
 /*# sourceMappingURL=style.css.map */
