@@ -4,7 +4,7 @@
 .fundador {
   &__container {
     @include mixins.flex-center;
-    padding: variables.$spacing-xl;
+    padding: variables.$spacing-xxl;
   }
 
   &__texto {

@@ -2,22 +2,33 @@
 @use "../utils/mixins";
 
 .evolucao {
+  &__container {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2.5rem 0;
+  }
+
   &__container-img {
+    max-width: 100%;
+    margin: auto;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     flex-direction: row;
-    gap: 5rem;
-    padding: 5rem 10rem;
+    gap: 2.5rem;
+    padding: 2rem 10rem;
   }
 
   &__title {
     font-family: variables.$font2;
-    font-size: variables.$font-xl;
-    font-weight: bold;
-    border-bottom: 1px solid variables.$cor6;
-    padding: variables.$spacing-md;
+    font-size: variables.$font-xxl;
+    color: variables.$cor5;
     text-align: center;
+    font-weight: 900;
+    padding: variables.$spacing-md;
   }
 
   &__img {
@@ -26,5 +37,42 @@
     border-radius: 50%;
     object-fit: cover;
     box-shadow: variables.$box-shadow2;
+  }
+
+  &__container-txt {
+    height: 25vw;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+
+    
+    background: url("/image/evolucao_bg1024px.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right center;
+  }
+
+  &__p {
+    max-width: 60%;
+    font-family: variables.$font3;
+    color: variables.$cor0;
+    font-size: variables.$font-m;
+    font-weight: 400;
+    text-indent: variables.$spacing-xxl;
+    text-align: center;
+    line-height: 1.5;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: variables.$cor2;
+    transition: all 0.3s ease;
+  }
+
+  &__link:hover {
+    color: variables.$cor1;
+    text-decoration: underline;
   }
 }

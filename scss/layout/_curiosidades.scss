@@ -1,0 +1,179 @@
+@use "../utils/variables";
+@use "../utils/mixins";
+
+.curiosidades {
+  &__container {
+    @include mixins.flex-center($direction: column);
+    padding: variables.$spacing-xl;
+    width: 70%;
+    margin: auto;
+    background-color: variables.$cor5;
+    
+    background: url("/image/curiosidades_bg1024px.webp");
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
+  &__title {
+    width: 100%;
+    text-align: start;
+    font-family: variables.$font2;
+    font-size: variables.$font-xl;
+    color: variables.$cor0;
+    font-weight: bolder;
+    border-bottom: 1px solid variables.$cor0;
+    padding-bottom: variables.$spacing-sm;
+  }
+
+  &__boxcontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem; /*ESPAÇO ENTRE AS LINHAS DA CAIXA*/
+  }
+
+  &__itenscontainer {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+    width: 100%;
+    max-width: 1000px;
+    padding-top: variables.$spacing-xl;
+  }
+
+  &__itenscontainer2 {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    grid-template-columns: repeat(2, minmax(250px, 1fr));
+    width: 100%;
+    max-width: 700px;
+  }
+
+  &__item {
+    min-height: 280px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: variables.$cor00;
+    padding: variables.$spacing-sm;
+    box-shadow: variables.$box-shadow3;
+  }
+
+  &__itemtitle {
+    text-align: center;
+    padding: variables.$spacing-md;
+  }
+
+  &__p {
+    font-family: variables.$font2;
+    font-size: variables.$font-m;
+    color: variables.$cor0;
+    font-weight: 700;
+    text-indent: variables.$spacing-md;
+    text-align: center;
+    line-height: variables.$line-height-base;
+    padding-bottom: variables.$spacing-md;
+  }
+
+  &__linkcontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0 10rem;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  &__link1,
+  &__link2,
+  &__link3 {
+    height: 400px;
+    width: 200px;
+    text-decoration: none;
+    font-family: variables.$font2;
+    font-size: variables.$font-s;
+    color: variables.$cor6;
+    font-weight: bold;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 2px 5px;
+  }
+
+  &__link1:hover,
+  &__link2:hover,
+  &__link3:hover {
+    transform: scale(1.1);
+    color: variables.$cor2;
+  }
+
+  &__link1 {
+    background: url("/image/curiosidades_peter600px.webp");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+
+  &__link2 {
+    background: url("/image/curiosidades_loic600px.webp");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+  &__link3 {
+    background: url("/image/curiosidades_annika600px.webp");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+}
+
+/*
+
+
+
+
+  &__lista {
+    font-family: variables.$font3;
+    font-size: variables.$font-m;
+    line-height: 1.8;
+    padding: variables.$spacing-md;
+  }
+
+  &__item {
+    list-style: none;
+  }
+
+  &__linkcontainer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: variables.$spacing-sm;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: variables.$cor6;
+    display: inline-block;
+    transition: 0.3s ease;
+  }
+
+  &__link:hover {
+    transform: scale(1.1);
+    color: variables.$cor2;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
+}
+*/
