@@ -8,6 +8,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.css" />
     <title>A História da Specialized</title>
   </head>
@@ -22,7 +23,7 @@
         <li class="nav__item"><a href="#fundador" class="nav__link">Fundador</a></li>
         <li class="nav__item"><a href="#evolucao" class="nav__link">Evolução</a></li>
         <li class="nav__item"><a href="#curiosidades" class="nav__link">Curiosidades</a></li>
-        <li class="nav__item"><a href="#fotos" class="nav__link">Fotos</a></li>
+        <li class="nav__item"><a href="#galeria" class="nav__link">Galeria</a></li>
         <li class="nav__item"><a href="#contato" class="nav__link">Contato</a></li>
       </ul>
     </nav>
@@ -54,28 +55,42 @@
           <div class="historia__p">A Specialized nasceu em 1974, na Califórnia, pelas mãos de Mike Sinyard — um jovem apaixonado por bicicletas. A empresa importava componentes da Itália, mas logo passou a desenvolver seus próprios produtos. O grande marco veio em 1981, com o lançamento da Stumpjumper, a primeira mountain bike produzida em massa no mundo. Desde então, a Specialized se tornou referência em inovação, qualidade e performance, acompanhando e moldando a evolução do MTB ao redor do planeta.</div>
           
         </div>
-        <figure class="historia__imagem1">
-          <picture> 
-            <source media="(max-width: 480px)" srcset="image/historia_team1974_400px.webp" type="image/webp">
-            <source media="(max-width: 890px)" srcset="image/historia_team1974_600px.webp" type="image/webp">
-            <img src="image/historia_team1974_600px.webp" alt="spz_team1974" class="historia__img1">
-          </picture>
-          <figcaption class="historia__figcaption1">Mike e o time Specialized (1974)</figcaption>
-        </figure>
-      </div>
-        <figure class="historia__imagem2">
-          <picture> 
-            <source media="(max-width: 480px)" srcset="image/historia_stumpjumper1981_400px.webp" type="image/webp">
-            <source media="(max-width: 890px)" srcset="image/historia_stumpjumper1981_500px.webp" type="image/webp">
-            <img src="image/historia_stumpjumper1981_500px.webp" alt="spz_team1974" class="historia__img2">
-          </picture>
-          <picture> 
-            <source media="(max-width: 480px)" srcset="image/historia_stumpjumper1981_2_400px.webp" type="image/webp">
-            <source media="(max-width: 890px)" srcset="image/historia_stumpjumper1981_2_500px.webp" type="image/webp">
-            <img src="image/historia_stumpjumper1981_2_500px.webp" alt="spz_team1974" class="historia__img2">
-          </picture>
-        </figure>
-        <figcaption class="historia__figcaption2">Primeira Stumpjumper (1981)</figcaption>
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <figure class="historia__imagem1">
+                <picture> 
+                  <source media="(max-width: 480px)" srcset="image/historia_team1974_400px.webp" type="image/webp">
+                  <source media="(max-width: 890px)" srcset="image/historia_team1974_600px.webp" type="image/webp">
+                  <img src="image/historia_team1974_600px.webp" alt="spz_team1974" class="historia__img1">
+                </picture>
+                <figcaption class="historia__figcaption1">Mike e o time Specialized (1974)</figcaption>
+              </figure>
+            </div>
+            <div class="swiper-slide">
+              <figure class="historia__imagem2">
+                <picture> 
+                  <source media="(max-width: 480px)" srcset="image/historia_stumpjumper1981_400px.webp" type="image/webp">
+                  <source media="(max-width: 890px)" srcset="image/historia_stumpjumper1981_500px.webp" type="image/webp">
+                  <img src="image/historia_stumpjumper1981_500px.webp" alt="spz_team1974" class="historia__img2">
+                </picture>
+              </figure>
+            </div>
+            <div class="swiper-slide">
+              <figure>  
+                <picture> 
+                  <source media="(max-width: 480px)" srcset="image/historia_stumpjumper1981_2_400px.webp" type="image/webp">
+                  <source media="(max-width: 890px)" srcset="image/historia_stumpjumper1981_2_500px.webp" type="image/webp">
+                  <img src="image/historia_stumpjumper1981_2_500px.webp" alt="spz_team1974" class="historia__img2">
+                </picture>
+                <figcaption class="historia__figcaption2">Primeira Stumpjumper (1981)</figcaption>
+              </figure>
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>      
     </section>
     
     
@@ -163,26 +178,102 @@
     </section>
     
     
-    Galeria de Fotos
-    Uma jornada visual pelas máquinas lendárias da Specialized e os momentos que marcaram sua história no MTB.
-    
-    **IMAGENS:
-    Time Specialized Brasil (2024)
-    
-    Specialized Ground-control (1996)
-    
-    FSR Suspension (1999)
-    
-    Specialized EPIC-8 (2025)
-    
-    Primeira geração da Roubaix (2004)
-    
-    Specialized Roubaix Carbon FACT (2023)
-    
-    Specialized EVO E-Bike (2025)
-    
-    Specialized Factory Racing (2025)
-    **
+    <section id="galeria">
+      <div class="galeria__container">
+        <h2 class="galeria__title">Galeria de Fotos</h2>
+          <div class="galeria__boxcontainer">
+            <p class="galeria__p">
+              Uma jornada visual pelas máquinas lendárias da Specialized e os momentos que marcaram sua história no MTB.</p>
+              <div class="swiper">
+                <div class="swiper-wrapper">
+
+                  <div class="swiper-slide">
+                    <figure>
+                        <picture>
+                          <source media="(max-width: 768px)" srcset="/image/galeria_spz_team_br_480px.webp" type="image/webp">
+                          <img src="/image/galeria_spz_team_br_650px.webp" alt="spz_team_image">
+                        </picture>
+                      <figcaption class="galeria__legenda">Time Specialized Brasil (2024)</figcaption>
+                    </figure>
+                  </div>
+                  
+                  <div class="swiper-slide">
+                    <figure>
+                        <picture>
+                          <source media="(max-width: 768px)" srcset="/image/galeria_ground_control_480px.webp" type="image/webp">
+                          <img src="/image/galeria_ground_control_650px.webp" alt="spz_ground-control_image">
+                        </picture>
+                      <figcaption class="galeria__legenda">Specialized Ground-control (1996)</figcaption>
+                    </figure>
+                  </div>                  
+                  
+                  <div class="swiper-slide">
+                    <figure>
+                        <picture>
+                          <source media="(max-width: 768px)" srcset="/image/galeria_fsr_suspension_480px.webp" type="image/webp">
+                          <img src="/image/galeria_fsr_suspension_650px.webp" alt="spz_fsr_suspension_image">
+                        </picture>
+                      <figcaption class="galeria__legenda">FSR Suspension (1999)</figcaption>
+                    </figure>
+                  </div>                 
+                  
+                  <div class="swiper-slide">
+                    <figure>
+                        <picture>
+                          <source media="(max-width: 768px)" srcset="/image/galeria_epic8_480px.webp" type="image/webp">
+                          <img src="/image/galeria_epic8_650px.webp" alt="spz_epic8_image">
+                        </picture>
+                      <figcaption class="galeria__legenda">Specialized EPIC-8 (2025)</figcaption>
+                    </figure>
+                  </div>                 
+                  
+                  <div class="swiper-slide">
+                    <figure>
+                        <picture>
+                          <source media="(max-width: 768px)" srcset="/image/galeria_roubaix_first_gen_2004_480p.webp" type="image/webp">
+                          <img src="/image/galeria_roubaix_first_gen_2004_650p.webp" alt="spz_roubaix_2004_image">
+                        </picture>
+                      <figcaption class="galeria__legenda">Primeira geração da Roubaix (2004)</figcaption>
+                    </figure>
+                  </div>                  
+                  
+                  <div class="swiper-slide">
+                    <figure>
+                        <picture>
+                          <source media="(max-width: 768px)" srcset="/image/galeria_roubaix_2023_480p.webp" type="image/webp">
+                          <img src="/image/galeria_roubaix_2023_650p.webp" alt="spz_roubaix_2023_image">
+                        </picture>
+                      <figcaption class="galeria__legenda">Specialized Roubaix Carbon FACT (2023)</figcaption>
+                    </figure>
+                  </div>                  
+                  
+                  <div class="swiper-slide">
+                    <figure>
+                        <picture>
+                          <source media="(max-width: 768px)" srcset="/image/galeria_spz_evo_480px.webp" type="image/webp">
+                          <img src="/image/galeria_spz_evo_650px.webp" alt="spz_evo_2025_image">
+                        </picture>
+                      <figcaption class="galeria__legenda">Specialized EVO E-Bike (2025)</figcaption>
+                    </figure>
+                  </div>                  
+                  
+                  <div class="swiper-slide">
+                    <figure>
+                        <picture>
+                          <source media="(max-width: 768px)" srcset="/image/galeria_factory_racing_2025_480p.webp" type="image/webp">
+                          <img src="/image/galeria_factory_racing_2025_650p.webp" alt="spz_factory_racing_image">
+                        </picture>
+                      <figcaption class="galeria__legenda">Specialized Factory Racing (2025)</figcaption>
+                    </figure>
+                  </div>                 
+                </div>
+                  <div class="swiper-button-next"></div>
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-pagination"></div>
+              </div>
+          </div>
+      </div>
+    </section>
   </main>
 
 
@@ -201,5 +292,27 @@
   
   Criado e desenvolvido por Felipe Silva © 2025
 </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+
+    //INSTANCIA DO SWIPER PRO CONTAINER E LOOP INFINITO PARA A GALERIA
+    const swiper = new Swiper ('.swiper', {
+      loop: true,
+
+      //DEFINIÇÃO DOS BOTÕES DE NAVEGAÇÃO (BOTÃO DE AVANÇAR E VOLTAR)
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+
+      //PAGINAÇÃO (PERMITE CLICAR PARA MUDAR A IMAGEM)
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    });
+
+  </script>
   </body>
 </html>

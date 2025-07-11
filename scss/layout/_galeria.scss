@@ -1,0 +1,23 @@
+@use "../utils/variables";
+@use "../utils/mixins";
+
+.galeria {
+  padding: 4rem 2rem;
+  background-color: #f9f9f9;
+
+  &__container {
+    max-width: 650px;
+    margin: 0 auto;
+  }
+
+  &__title {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  img {
+    width: 100%;
+    display: block;
+    border-radius: 8px;
+  }
+}

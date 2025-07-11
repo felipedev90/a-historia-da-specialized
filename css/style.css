@@ -571,5 +571,22 @@ body {
 
 }
 */
+.galeria {
+  padding: 4rem 2rem;
+  background-color: #f9f9f9;
+}
+.galeria__container {
+  max-width: 650px;
+  margin: 0 auto;
+}
+.galeria__title {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.galeria img {
+  width: 100%;
+  display: block;
+  border-radius: 8px;
+}
 
 /*# sourceMappingURL=style.css.map */
