@@ -11,13 +11,62 @@
   }
 
   &__title {
-    text-align: center;
-    margin-bottom: 2rem;
+    font-family: variables.$font2;
+    font-size: variables.$font-xl;
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding-top: 2rem;
+    border-bottom: 1px solid variables.$cor6;
   }
 
-  img {
+  &__p {
+    font-family: variables.$font3;
+    font-size: variables.$font-m;
+    padding-top: variables.$spacing-sm;
+    text-align: center;
+    line-height: variables.$line-height-base;
+    padding-bottom: variables.$spacing-md;
+  }
+
+  &__legenda1 {
+    font-family: variables.$font2;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: variables.$cor0;
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+    padding: 8px 12px;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  &__legenda {
+    font-family: variables.$font2;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: variables.$cor0;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    padding: 8px 12px;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  &__img {
     width: 100%;
     display: block;
     border-radius: 8px;
   }
+}
+
+.swiper-slide figure {
+  position: relative;
 }
