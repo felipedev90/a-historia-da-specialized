@@ -1,2 +1,70 @@
 @use "../utils/variables";
 @use "../utils/mixins";
+
+.footer {
+  &__container {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    padding: variables.$spacing-md;
+
+    background-color: variables.$cor6;
+  }
+
+  &__textcontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    &:not(:first-child) {
+      border-left: 1px solid variables.$cor0;
+    }
+  }
+
+  &__p {
+    font-family: variables.$font3;
+    font-size: variables.$font-s;
+    color: variables.$cor0;
+    text-align: center;
+    padding: variables.$spacing-md;
+  }
+
+  &__autor {
+    font-family: variables.$font1;
+    color: variables.$cor0;
+    font-weight: 400;
+    font-size: variables.$font-m;
+  }
+
+  &__link,
+  &__redessociais a {
+    text-decoration: none;
+    color: variables.$cor0;
+  }
+
+  &__redessociais {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-bottom: 20px;
+  }
+
+  &__redessociais a {
+    color: white;
+    font-size: variables.$font-xl;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+
+  &__redessociais a:hover,
+  &__link:hover {
+    transform: scale(1.2);
+    color: crimson;
+  }
+}
