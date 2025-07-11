@@ -27,6 +27,9 @@
         <li class="nav__item"><a href="#galeria" class="nav__link">Galeria</a></li>
         <li class="nav__item"><a href="#contato" class="nav__link">Contato</a></li>
       </ul>
+        <button class="nav__toggle" aria-label="Abrir Menu">
+        <i class="fa-solid fa-bars"></i>
+        </button>
     </nav>
   </header>
 
@@ -336,30 +339,37 @@
   <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/plugins/thumbnail/lg-thumbnail.umd.min.js"></script>
   
   <script>
-    lightGallery(document.querySelector('.swiper-wrapper'), {
-      selector: 'a',
-      plugins: [lgZoom, lgThumbnail],
-      hideBarsDelay: 3000,
-      closable: true,
-      showCloseIcon: true 
-    });
+    const toggleButton = document.querySelector('.nav__toggle');
+    const navLista = document.querySelector('.nav__lista');
 
+      toggleButton.addEventListener('click', () => {
+      navLista.classList.toggle('active');
+    });
   </script>
-  
-  <script>
-    const swiper = new Swiper ('.swiper', {
-      loop: true,
 
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
+    <script>
+      lightGallery(document.querySelector('.swiper-wrapper'), {
+        selector: 'a',
+        plugins: [lgZoom, lgThumbnail],
+        hideBarsDelay: 3000,
+        closable: true,
+        showCloseIcon: true
+      });
+    </script>
 
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-    });
+    <script>
+      const swiper = new Swiper ('.swiper', {
+        loop: true,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+      });
+    </script>
 
   </script>
   </body>

@@ -9,13 +9,26 @@
     border-bottom: 2px solid variables.$cor3;
     padding: 1rem 3rem;
 
-
     @include mixins.respond-to(md) {
       @include mixins.flex-center;
     }
 
     @include mixins.respond-to(sm) {
       @include mixins.flex-center;
+    }
+  }
+
+  &__toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: variables.$cor5;
+    cursor: pointer;
+    padding-left: variables.$spacing-md;
+
+    @include mixins.respond-to(sm) {
+      display: block;
     }
   }
 
@@ -26,6 +39,20 @@
     font-weight: bold;
     @include mixins.flex-center;
 
+    @include mixins.respond-to(sm) {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background: variables.$cor6;
+      padding: 1rem 0;
+    }
+
+    &.active {
+      display: flex;
+    }
   }
 
   &__item {
