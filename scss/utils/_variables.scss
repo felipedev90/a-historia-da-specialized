@@ -54,5 +54,16 @@ $breakpoint-sm: 510px;
 $breakpoint-md: 890px;
 $breakpoint-lg: 1024px;
 
-$gradient-radial1: radial-gradient(circle, $cor0 0%, $cor3 100%);
-$gradient-radial2: radial-gradient(circle, $cor0 20%, $cor2 300%);
+
+/*
+
+    @include mixins.respond-to(lg) {
+      
+    }
+    @include mixins.respond-to(md) {
+      
+    }
+    @include mixins.respond-to(sm) {
+      
+    }
+*/

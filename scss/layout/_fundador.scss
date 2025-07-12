@@ -5,11 +5,30 @@
   &__container {
     @include mixins.flex-center;
     padding: variables.$spacing-xxl;
+
+    @include mixins.respond-to(lg) {
+      padding: variables.$spacing-xl;
+    }
+    @include mixins.respond-to(md) {
+      padding: variables.$spacing-md;
+    }
+    @include mixins.respond-to(sm) {
+      padding: variables.$spacing-sm;
+    }
   }
 
   &__texto {
     width: 80%;
-    height: fit-content;
+
+    @include mixins.respond-to(lg) {
+      width: 100%;
+    }
+    @include mixins.respond-to(md) {
+      width: 100%;
+    }
+    @include mixins.respond-to(sm) {
+      width: 100%;
+    }
   }
 
   &__title {
@@ -19,30 +38,66 @@
     border-bottom: 1px solid variables.$cor6;
     padding-bottom: variables.$spacing-sm;
     margin-bottom: variables.$spacing-md;
+
+    @include mixins.respond-to(md) {
+      text-align: center;
+    }
+    @include mixins.respond-to(sm) {
+      text-align: center;
+    }
   }
 
   &__boxquote {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 5rem;
     padding: variables.$spacing-md;
     box-shadow: variables.$box-shadow2;
+
     background: url("/image/fundador_spz_logo_700px.webp");
     background-size: contain;
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+
+    @include mixins.respond-to(lg) {
+      display: flex;
+      flex-direction: column;
+    }
+    @include mixins.respond-to(md) {
+      display: flex;
+      flex-direction: column;
+    }
+    @include mixins.respond-to(sm) {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   &__p {
-    width: 50%;
+    max-width: 50%;
     font-family: variables.$font3;
     font-size: variables.$font-m;
     text-indent: variables.$spacing-xxl;
     padding-top: variables.$spacing-sm;
     text-align: justify;
     line-height: variables.$line-height-base;
+
+    @include mixins.respond-to(lg) {
+      max-width: 90%;
+      text-align: center;
+      padding-bottom: variables.$spacing-sm;
+    }
+    @include mixins.respond-to(md) {
+      max-width: 90%;
+      text-align: center;
+      padding-bottom: variables.$spacing-sm;
+    }
+    @include mixins.respond-to(sm) {
+      max-width: 90%;
+      text-align: center;
+      padding-bottom: variables.$spacing-sm;
+    }
   }
 
   &__imagem-citacao {

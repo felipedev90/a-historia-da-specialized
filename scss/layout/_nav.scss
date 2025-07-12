@@ -27,6 +27,10 @@
     cursor: pointer;
     padding-left: variables.$spacing-md;
 
+    @include mixins.respond-to(md) {
+      display: block;
+    }
+
     @include mixins.respond-to(sm) {
       display: block;
     }
@@ -38,6 +42,17 @@
     font-size: variables.$font-s;
     font-weight: bold;
     @include mixins.flex-center;
+
+    @include mixins.respond-to(md) {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background: variables.$cor6;
+      padding: 1rem 0;
+    }
 
     @include mixins.respond-to(sm) {
       display: none;
