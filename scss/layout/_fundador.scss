@@ -62,15 +62,25 @@
 
     @include mixins.respond-to(lg) {
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
+      text-align: justify;
+      background-position: center center;
     }
     @include mixins.respond-to(md) {
       display: flex;
       flex-direction: column;
+      background: url("/image/fundador_spz_logo_500px.webp");
+      background-size: contain;
+      background-position: top center;
+      background-repeat: no-repeat;
     }
     @include mixins.respond-to(sm) {
       display: flex;
       flex-direction: column;
+      background: url("/image/fundador_spz_logo_400px.webp");
+      background-size: contain;
+      background-position: top top;
+      background-repeat: no-repeat;
     }
   }
 

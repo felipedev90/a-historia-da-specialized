@@ -4,7 +4,7 @@
 .evolucao {
   &__container {
     @include mixins.flex-center($direction: column);
-    padding: 2.5rem 0;
+    padding-top: 2.5rem;
   }
 
   &__container-img {

@@ -264,11 +264,11 @@ body {
   }
 }
 .home__p {
-  font-family: "PoiretOne", arial cursive;
+  font-family: "Roboto-condensed", arial, cursive;
   color: #f2f2f2;
   font-size: 1.5rem;
   text-align: justify;
-  font-weight: 600;
+  font-weight: 200;
   padding-bottom: 2rem;
 }
 .home__botao {
@@ -459,19 +459,29 @@ body {
 @media (max-width: 1024px) {
   .fundador__boxquote {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    text-align: justify;
+    background-position: center center;
   }
 }
 @media (max-width: 810px) {
   .fundador__boxquote {
     display: flex;
     flex-direction: column;
+    background: url("/image/fundador_spz_logo_500px.webp");
+    background-size: contain;
+    background-position: top center;
+    background-repeat: no-repeat;
   }
 }
 @media (max-width: 510px) {
   .fundador__boxquote {
     display: flex;
     flex-direction: column;
+    background: url("/image/fundador_spz_logo_400px.webp");
+    background-size: contain;
+    background-position: top top;
+    background-repeat: no-repeat;
   }
 }
 .fundador__p {
@@ -525,7 +535,7 @@ body {
   align-items: center;
   flex-direction: column;
   flex-wrap: wrap;
-  padding: 2.5rem 0;
+  padding-top: 2.5rem;
 }
 .evolucao__container-img {
   display: flex;
@@ -690,164 +700,179 @@ body {
 }
 
 .curiosidades__container {
+  min-width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
   flex-direction: column;
-  flex-wrap: wrap;
-  padding: 32px;
-  width: 70%;
-  margin: auto;
-  background-color: #0d0d0d;
-  background: url("/image/curiosidades_bg1024px.webp");
-  background-position: center center;
-  background-size: contain;
+  padding: 48px;
+  background: url("/image/curiosidades_bg_sworks_1900px.webp");
+  background-size: cover;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-position: center center;
 }
 .curiosidades__title {
-  width: 100%;
-  text-align: start;
   font-family: "PoiretOne", arial cursive;
   font-size: 2.5rem;
   color: #f2f2f2;
   font-weight: bolder;
   border-bottom: 1px solid #f2f2f2;
   padding-bottom: 8px;
+  margin-bottom: 16px;
 }
-.curiosidades__boxcontainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2rem; /*ESPAÇO ENTRE AS LINHAS DA CAIXA*/
-}
-.curiosidades__itenscontainer {
-  display: grid;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-  grid-template-columns: repeat(3, minmax(200px, 1fr));
-  width: 100%;
-  max-width: 1000px;
-  padding-top: 32px;
-}
-.curiosidades__itenscontainer2 {
-  display: grid;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-  grid-template-columns: repeat(2, minmax(250px, 1fr));
-  width: 100%;
-  max-width: 700px;
-}
-.curiosidades__item {
-  min-height: 280px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background-color: transparent;
-  padding: 8px;
-  box-shadow: 0px 0px 10px #808080;
-}
-.curiosidades__itemtitle {
-  text-align: center;
-  padding: 16px;
-}
-.curiosidades__p {
-  font-family: "PoiretOne", arial cursive;
-  font-size: 1.5rem;
-  color: #f2f2f2;
-  font-weight: 700;
-  text-indent: 16px;
-  text-align: center;
-  line-height: 1.2;
-  padding-bottom: 16px;
-}
-.curiosidades__linkcontainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 0 10rem;
-  width: 100%;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-.curiosidades__link1, .curiosidades__link2, .curiosidades__link3 {
-  height: 400px;
-  width: 200px;
-  text-decoration: none;
-  font-family: "PoiretOne", arial cursive;
-  font-size: 1.2rem;
-  color: #000000;
-  font-weight: bold;
+.curiosidades__textcontainer {
   display: flex;
   justify-content: flex-end;
-  align-items: flex-start;
-  padding: 2px 5px;
 }
-.curiosidades__link1:hover, .curiosidades__link2:hover, .curiosidades__link3:hover {
-  transform: scale(1.1);
-  color: #f21d2f;
-}
-.curiosidades__link1 {
-  background: url("/image/curiosidades_peter600px.webp");
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-}
-.curiosidades__link2 {
-  background: url("/image/curiosidades_loic600px.webp");
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-}
-.curiosidades__link3 {
-  background: url("/image/curiosidades_annika600px.webp");
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
+.curiosidades__p {
+  max-width: 40%;
+  font-family: "Roboto-condensed", arial, cursive;
+  color: #f2f2f2;
+  background-color: rgba(0, 0, 0, 0.4);
+  box-shadow: 0.3px 0.3px 5px #000000;
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-indent: 48px;
+  text-align: justify;
+  line-height: 1.5;
+  padding: 16px;
 }
 
 /*
+.curiosidades {
+  &__container {
+    @include mixins.flex-center($direction: column);
+    padding: variables.$spacing-xl;
+    width: 70%;
+    margin: auto;
+    background-color: variables.$cor5;
 
+    background: url("/image/curiosidades_bg1024px.webp");
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
 
+  &__title {
+    width: 100%;
+    text-align: start;
+    font-family: variables.$font2;
+    font-size: variables.$font-xl;
+    color: variables.$cor0;
+    font-weight: bolder;
+    border-bottom: 1px solid variables.$cor0;
+    padding-bottom: variables.$spacing-sm;
+  }
 
+  &__boxcontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem; 
+  }
 
-  &__lista {
-    font-family: variables.$font3;
-    font-size: variables.$font-m;
-    line-height: 1.8;
-    padding: variables.$spacing-md;
+  &__itenscontainer {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+    width: 100%;
+    max-width: 1000px;
+    padding-top: variables.$spacing-xl;
+  }
+
+  &__itenscontainer2 {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    grid-template-columns: repeat(2, minmax(250px, 1fr));
+    width: 100%;
+    max-width: 700px;
   }
 
   &__item {
-    list-style: none;
+    min-height: 280px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: variables.$cor00;
+    padding: variables.$spacing-sm;
+    box-shadow: variables.$box-shadow3;
+  }
+
+  &__itemtitle {
+    text-align: center;
+    padding: variables.$spacing-md;
+  }
+
+  &__p {
+    font-family: variables.$font2;
+    font-size: variables.$font-m;
+    color: variables.$cor0;
+    font-weight: 700;
+    text-indent: variables.$spacing-md;
+    text-align: center;
+    line-height: variables.$line-height-base;
+    padding-bottom: variables.$spacing-md;
   }
 
   &__linkcontainer {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
-    padding: variables.$spacing-sm;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0 10rem;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
   }
 
-  &__link {
+  &__link1,
+  &__link2,
+  &__link3 {
+    height: 400px;
+    width: 200px;
     text-decoration: none;
+    font-family: variables.$font2;
+    font-size: variables.$font-s;
     color: variables.$cor6;
-    display: inline-block;
-    transition: 0.3s ease;
+    font-weight: bold;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 2px 5px;
   }
 
-  &__link:hover {
+  &__link1:hover,
+  &__link2:hover,
+  &__link3:hover {
     transform: scale(1.1);
     color: variables.$cor2;
-    font-weight: bold;
-    text-decoration: underline;
   }
 
+  &__link1 {
+    background: url("/image/curiosidades_peter600px.webp");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+
+  &__link2 {
+    background: url("/image/curiosidades_loic600px.webp");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+  &__link3 {
+    background: url("/image/curiosidades_annika600px.webp");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
 }
 */
 .galeria {
