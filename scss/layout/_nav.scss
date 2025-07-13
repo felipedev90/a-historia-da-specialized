@@ -3,6 +3,8 @@
 
 .nav {
   &__container {
+    position: relative;
+    z-index: 1000;
     height: fit-content;
     width: 100%;
     @include mixins.flex-center($justify: space-between);
@@ -10,10 +12,6 @@
     padding: 1rem 3rem;
 
     @include mixins.respond-to(md) {
-      @include mixins.flex-center;
-    }
-
-    @include mixins.respond-to(sm) {
       @include mixins.flex-center;
     }
   }
@@ -27,10 +25,6 @@
     cursor: pointer;
     padding-left: variables.$spacing-md;
 
-    @include mixins.respond-to(md) {
-      display: block;
-    }
-
     @include mixins.respond-to(sm) {
       display: block;
     }
@@ -42,17 +36,6 @@
     font-size: variables.$font-s;
     font-weight: bold;
     @include mixins.flex-center;
-
-    @include mixins.respond-to(md) {
-      display: none;
-      flex-direction: column;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      width: 100%;
-      background: variables.$cor6;
-      padding: 1rem 0;
-    }
 
     @include mixins.respond-to(sm) {
       display: none;
@@ -66,7 +49,8 @@
     }
 
     &.active {
-      display: flex;
+      display: flex !important;
+      z-index: 9999;
     }
   }
 
@@ -75,13 +59,16 @@
   }
 
   &__link {
-    color: variables.$cor5;
+    color: variables.$cor6;
     text-decoration: none;
     display: inline-block;
-    text-shadow: variables.$title-shadow;
     transition: color 0.3s ease;
     display: inline-block;
     position: relative;
+
+    @include mixins.respond-to(sm) {
+      color: variables.$cor0;
+    }
   }
 
   &__link:hover {
@@ -94,7 +81,7 @@
     display: block;
     width: 0;
     height: 2px;
-    background: variables.$cor5;
+    background: variables.$cor2;
     transition: width 0.4s;
     position: absolute;
     bottom: -4px;

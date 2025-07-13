@@ -1,5 +1,7 @@
 @use "../utils/variables";
 @use "../utils/mixins";
+@use "../components/title";
+@use "../components/paragraph";
 
 .fundador {
   &__container {
@@ -23,98 +25,66 @@
     @include mixins.respond-to(lg) {
       width: 100%;
     }
-    @include mixins.respond-to(md) {
-      width: 100%;
-    }
-    @include mixins.respond-to(sm) {
-      width: 100%;
-    }
   }
 
   &__title {
-    font-family: variables.$font2;
-    font-size: variables.$font-xl;
-    font-weight: bolder;
-    border-bottom: 1px solid variables.$cor6;
-    padding-bottom: variables.$spacing-sm;
+    @include title.title;
     margin-bottom: variables.$spacing-md;
 
     @include mixins.respond-to(md) {
       text-align: center;
     }
-    @include mixins.respond-to(sm) {
-      text-align: center;
-    }
   }
 
   &__boxquote {
+    @include mixins.flex-center;
     display: flex;
-    justify-content: center;
-    align-items: center;
     padding: variables.$spacing-md;
     box-shadow: variables.$box-shadow2;
 
-    background: url("/image/fundador_spz_logo_700px.webp");
-    background-size: contain;
-    background-position: center center;
-    background-repeat: no-repeat;
+    @include mixins.background-responsive(
+      "fundador_spz_logo_700px",
+      $size: contain,
+      $position: center center
+    );
     background-attachment: fixed;
 
     @include mixins.respond-to(lg) {
-      display: flex;
-      flex-direction: row;
+      @include mixins.flex-center;
       text-align: justify;
       background-position: center center;
     }
     @include mixins.respond-to(md) {
-      display: flex;
       flex-direction: column;
-      background: url("/image/fundador_spz_logo_500px.webp");
-      background-size: contain;
-      background-position: top center;
-      background-repeat: no-repeat;
+      @include mixins.background-responsive(
+        "fundador_spz_logo_500px",
+        $size: contain,
+        $position: center center
+      );
+      background-attachment: fixed;
     }
+
     @include mixins.respond-to(sm) {
-      display: flex;
-      flex-direction: column;
-      background: url("/image/fundador_spz_logo_400px.webp");
-      background-size: contain;
-      background-position: top top;
-      background-repeat: no-repeat;
+      @include mixins.background-responsive(
+        "fundador_spz_logo_400px",
+        $size: contain,
+        $position: center center
+      );
+      background-attachment: fixed;
     }
   }
 
   &__p {
     max-width: 50%;
-    font-family: variables.$font3;
-    font-size: variables.$font-m;
-    text-indent: variables.$spacing-xxl;
-    padding-top: variables.$spacing-sm;
-    text-align: justify;
-    line-height: variables.$line-height-base;
+    @include paragraph.paragraph;
 
     @include mixins.respond-to(lg) {
       max-width: 90%;
-      text-align: center;
-      padding-bottom: variables.$spacing-sm;
-    }
-    @include mixins.respond-to(md) {
-      max-width: 90%;
-      text-align: center;
-      padding-bottom: variables.$spacing-sm;
-    }
-    @include mixins.respond-to(sm) {
-      max-width: 90%;
-      text-align: center;
-      padding-bottom: variables.$spacing-sm;
     }
   }
 
   &__imagem-citacao {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    flex-direction: column;
+    @include mixins.flex-center($justify: flex-end, $direction: column);
   }
 
   &__img {

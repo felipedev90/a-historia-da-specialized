@@ -1,55 +1,49 @@
 @use "../utils/variables";
 @use "../utils/mixins";
+@use "../components/button";
+@use "../components/title";
+@use "../components/paragraph";
 
 .home {
   &__container {
+    @include mixins.flex-center($justify: space-evenly);
     width: 100%;
     max-width: 100%;
     min-height: 100vh;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
     gap: 4rem;
     padding: 4rem 1rem;
 
-    background-image: url("/image/header1900px.webp");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center right;
+    @include mixins.background-responsive(
+      "header1900px",
+      $position: center right
+    );
 
     @include mixins.respond-to(lg) {
-      flex-direction: column;
-      text-align: center;
-      flex-wrap: wrap;
+      @include mixins.flex-center($direction: column);
       gap: 2rem;
 
-      background-image: url("/image/header1024px.webp");
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center right;
+      @include mixins.background-responsive(
+        "header1024px",
+        $position: center right
+      );
     }
 
     @include mixins.respond-to(md) {
-      flex-direction: column;
-      text-align: justify;
-      flex-wrap: wrap;
+      @include mixins.flex-center($direction: column, $align: justify);
       gap: 1.8rem;
 
-      background-image: url("/image/header890px.webp");
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center center;
+      @include mixins.background-responsive(
+        "header890px",
+        $position: center center
+      );
     }
     @include mixins.respond-to(sm) {
-      flex-direction: column;
-      text-align: justify;
-      flex-wrap: wrap;
       gap: 1.5rem;
 
-      background-image: url("/image/header590px.webp");
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center center;
+      @include mixins.background-responsive(
+        "header590px",
+        $position: center center
+      );
     }
   }
 
@@ -62,25 +56,11 @@
       padding: 2rem;
       border-radius: 15px;
     }
-    @include mixins.respond-to(md) {
-      background-color: rgba(0, 0, 0, 0.4);
-      padding: 2rem;
-      border-radius: 15px;
-    }
-    @include mixins.respond-to(sm) {
-      background-color: rgba(0, 0, 0, 0.4);
-      padding: 2rem;
-      border-radius: 15px;
-    }
   }
 
   &__title {
-    font-family: variables.$font2;
-    color: variables.$cor0;
-    font-weight: 900;
-    font-size: variables.$font-xxl;
+    @include title.title($border: none, $color: variables.$cor0);
     text-align: center;
-    padding-bottom: 1rem;
 
     @include mixins.respond-to(lg) {
       font-size: variables.$font-xxl;
@@ -89,40 +69,15 @@
     @include mixins.respond-to(md) {
       font-size: variables.$font-xl;
     }
-
-    @include mixins.respond-to(sm) {
-      font-size: variables.$font-xl;
-    }
   }
 
   &__p {
-    font-family: variables.$font3;
+    @include paragraph.paragraph ($indent: none);
     color: variables.$cor0;
-    font-size: variables.$font-m;
-    text-align: justify;
-    font-weight: 200;
-    padding-bottom: 2rem;
   }
 
   &__botao {
-    text-decoration: none;
-    color: variables.$cor0;
-    background-color: variables.$cor5;
-    font-family: variables.$font3;
-    font-size: variables.$font-s;
-    border: 2px solid variables.$cor5;
-    border-radius: 20px;
-    padding: 0.5rem 4rem;
-    box-shadow: variables.$box-shadow2;
-    transition: 0.3s ease;
-    display: inline-block;
-  }
-
-  &__botao:hover {
-    color: variables.$cor2;
-    background-color: variables.$cor6;
-    transform: scale(1.05);
-    box-shadow: variables.$box-shadow2;
+    @include button.botao;
   }
 
   &__imagem {

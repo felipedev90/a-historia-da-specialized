@@ -1,187 +1,200 @@
 @use "../utils/variables";
 @use "../utils/mixins";
+@use "../components/title";
+@use "../components/paragraph";
 
 .curiosidades {
   &__container {
     min-width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+    @include mixins.flex-center($direction: column);
     padding: variables.$spacing-xxl;
 
-    background: url("/image/curiosidades_bg_sworks_1900px.webp");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
+    @include mixins.background-responsive("curiosidades_bg_sworks_1900px");
+
+    @include mixins.respond-to(lg) {
+      @include mixins.background-responsive("curiosidades_bg_sworks_1024px");
+    }
+
+    @include mixins.respond-to(md) {
+      @include mixins.background-responsive("curiosidades_bg_sworks_890px");
+      padding: variables.$spacing-lg;
+    }
+
+    @include mixins.respond-to(sm) {
+      @include mixins.background-responsive("curiosidades_bg_sworks_590px");
+    }
   }
 
-  &__title {
-    font-family: variables.$font2;
-    font-size: variables.$font-xl;
-    color: variables.$cor0;
-    font-weight: bolder;
-    border-bottom: 1px solid variables.$cor0;
-    padding-bottom: variables.$spacing-sm;
-    margin-bottom: variables.$spacing-md;
-  }
   &__textcontainer {
-    display: flex;
-    justify-content: flex-end;
+    @include mixins.flex-center($justify: flex-end);
 
+    @include mixins.respond-to(lg) {
+      @include mixins.flex-center;
+    }
   }
 
   &__p {
+    @include paragraph.paragraph($height: 1.5);
     max-width: 40%;
-    font-family: variables.$font3;
     color: variables.$cor0;
     background-color: rgba(0, 0, 0, 0.4);
     box-shadow: variables.$box-shadow2;
-    font-size: variables.$font-m;
-    font-weight: 400;
-    text-indent: variables.$spacing-xxl;
-    text-align: justify;
-    line-height: 1.5;
-    padding: variables.$spacing-md;
-  }
 
-  
-}
-
-/*
-.curiosidades {
-  &__container {
-    @include mixins.flex-center($direction: column);
-    padding: variables.$spacing-xl;
-    width: 70%;
-    margin: auto;
-    background-color: variables.$cor5;
-    
-    background: url("/image/curiosidades_bg1024px.webp");
-    background-position: center center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    @include mixins.respond-to(lg) {
+      max-width: 90%;
+      text-align: center;
+    }
+    @include mixins.respond-to(md) {
+      padding: variables.$spacing-sm;
+    }
   }
 
   &__title {
-    width: 100%;
-    text-align: start;
-    font-family: variables.$font2;
-    font-size: variables.$font-xl;
-    color: variables.$cor0;
-    font-weight: bolder;
-    border-bottom: 1px solid variables.$cor0;
-    padding-bottom: variables.$spacing-sm;
-  }
-
-  &__boxcontainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem; 
-  }
-
-  &__itenscontainer {
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    grid-template-columns: repeat(3, minmax(200px, 1fr));
-    width: 100%;
-    max-width: 1000px;
-    padding-top: variables.$spacing-xl;
-  }
-
-  &__itenscontainer2 {
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    grid-template-columns: repeat(2, minmax(250px, 1fr));
-    width: 100%;
-    max-width: 700px;
-  }
-
-  &__item {
-    min-height: 280px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: variables.$cor00;
-    padding: variables.$spacing-sm;
-    box-shadow: variables.$box-shadow3;
-  }
-
-  &__itemtitle {
+    @include title.title($border: none);
     text-align: center;
-    padding: variables.$spacing-md;
+    margin: auto;
   }
 
-  &__p {
-    font-family: variables.$font2;
-    font-size: variables.$font-m;
-    color: variables.$cor0;
-    font-weight: 700;
-    text-indent: variables.$spacing-md;
-    text-align: center;
-    line-height: variables.$line-height-base;
-    padding-bottom: variables.$spacing-md;
+  &__atletascontainer {
+    @include mixins.flex-center;
+    padding-bottom: variables.$spacing-lg;
+
+    @include mixins.respond-to(lg) {
+      @include mixins.flex-center;
+      margin: auto;
+      max-width: 75%;
+    }
+    @include mixins.respond-to(md) {
+      @include mixins.flex-center($direction: column);
+      margin: auto;
+      max-width: 95%;
+    }
   }
 
-  &__linkcontainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 0 10rem;
-    width: 100%;
-    max-width: 1000px;
-    margin: 0 auto;
+  &__atleta1 {
+    @include mixins.flex-center(
+      $justify: flex-end,
+      $align: flex-start,
+      $wrap: nowrap
+    );
+    @include mixins.background-responsive("curiosidades_peter600px");
+    min-height: 550px;
+    min-width: 300px;
+    transition: 0.3s ease;
+
+    @include mixins.respond-to(lg) {
+      min-height: 450px;
+      min-width: 200px;
+    }
+
+    @include mixins.respond-to(md) {
+      @include mixins.background-responsive(
+        "curiosidades_peter600px",
+        $position: top center
+      );
+      min-height: 250px;
+      min-width: 450px;
+    }
+
+    @include mixins.respond-to(sm) {
+      @include mixins.background-responsive(
+        "curiosidades_peter400px",
+        $position: top center
+      );
+      min-height: 150px;
+      min-width: 350px;
+    }
   }
 
-  &__link1,
-  &__link2,
-  &__link3 {
-    height: 400px;
-    width: 200px;
+  &__atleta2 {
+    @include mixins.flex-center(
+      $justify: flex-end,
+      $align: flex-start,
+      $wrap: nowrap
+    );
+    @include mixins.background-responsive("curiosidades_loic600px");
+    min-height: 550px;
+    min-width: 300px;
+    transition: 0.3s ease;
+
+    @include mixins.respond-to(lg) {
+      min-height: 450px;
+      min-width: 200px;
+    }
+
+    @include mixins.respond-to(md) {
+      @include mixins.background-responsive(
+        "curiosidades_loic600px",
+        $position: top center
+      );
+      min-height: 250px;
+      min-width: 450px;
+    }
+
+    @include mixins.respond-to(sm) {
+      @include mixins.background-responsive(
+        "curiosidades_loic400px",
+        $position: top center
+      );
+      min-height: 150px;
+      min-width: 350px;
+    }
+  }
+
+  &__atleta3 {
+    @include mixins.flex-center(
+      $justify: flex-end,
+      $align: flex-start,
+      $wrap: nowrap
+    );
+    @include mixins.background-responsive("curiosidades_annika600px");
+    min-height: 550px;
+    min-width: 300px;
+    transition: 0.3s ease;
+
+    @include mixins.respond-to(lg) {
+      min-height: 450px;
+      min-width: 200px;
+    }
+
+    @include mixins.respond-to(md) {
+      @include mixins.background-responsive(
+        "curiosidades_annika600px",
+        $position: top center
+      );
+      min-height: 250px;
+      min-width: 450px;
+    }
+
+    @include mixins.respond-to(sm) {
+      @include mixins.background-responsive(
+        "curiosidades_annika400px",
+        $position: top center
+      );
+      min-height: 150px;
+      min-width: 350px;
+    }
+  }
+
+  &__atleta {
     text-decoration: none;
-    font-family: variables.$font2;
+    font-family: variables.$font3;
     font-size: variables.$font-s;
-    color: variables.$cor6;
-    font-weight: bold;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-start;
-    padding: 2px 5px;
+    color: variables.$cor5;
+    padding-right: 0.5rem;
   }
 
-  &__link1:hover,
-  &__link2:hover,
-  &__link3:hover {
+  &__atleta1:hover,
+  &__atleta2:hover,
+  &__atleta3:hover {
     transform: scale(1.1);
-    color: variables.$cor2;
-  }
+    box-shadow: variables.$box-shadow1;
 
-  &__link1 {
-    background: url("/image/curiosidades_peter600px.webp");
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-  }
-
-  &__link2 {
-    background: url("/image/curiosidades_loic600px.webp");
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-  }
-  &__link3 {
-    background: url("/image/curiosidades_annika600px.webp");
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
+    @include mixins.respond-to(md) {
+      transform: scale(1.05);
+    }
+    @include mixins.respond-to(sm) {
+      transform: scale(1.05);
+    }
   }
 }
-*/

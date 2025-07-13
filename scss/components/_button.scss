@@ -1,0 +1,22 @@
+@use "../utils/variables";
+
+@mixin botao {
+  text-decoration: none;
+  color: variables.$cor0;
+  background-color: variables.$cor5;
+  font-family: variables.$font3;
+  font-size: variables.$font-s;
+  border: 2px solid variables.$cor5;
+  border-radius: 20px;
+  padding: 0.5rem 4rem;
+  box-shadow: variables.$box-shadow2;
+  transition: 0.3s ease;
+  display: inline-block;
+
+  &:hover {
+    color: variables.$cor2;
+    background-color: variables.$cor6;
+    transform: scale(1.05);
+    box-shadow: variables.$box-shadow2;
+  }
+}

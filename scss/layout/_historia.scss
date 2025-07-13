@@ -1,5 +1,7 @@
 @use "../utils/variables";
 @use "../utils/mixins";
+@use "../components/title";
+@use "../components/paragraph";
 
 #historia {
   padding-bottom: 2rem;
@@ -14,12 +16,7 @@
 
     @include mixins.respond-to(lg) {
       max-width: 100%;
-    }
-    @include mixins.respond-to(md) {
-      max-width: 100%;
-    }
-    @include mixins.respond-to(sm) {
-      max-width: 100%;
+      @include mixins.flex-center($align: flex-end);
     }
   }
 
@@ -30,31 +27,17 @@
       padding: variables.$spacing-md;
     }
     @include mixins.respond-to(md) {
-      max-width: 95%;
-      padding: variables.$spacing-sm;
-    }
-    @include mixins.respond-to(sm) {
       max-width: 100%;
       padding: variables.$spacing-sm;
     }
   }
 
   &__title {
-    font-family: variables.$font2;
-    font-size: variables.$font-xl;
-    font-weight: bolder;
-    border-bottom: 1px solid variables.$cor6;
-    padding-bottom: variables.$spacing-sm;
+    @include title.title;
   }
 
   &__p {
-    font-family: variables.$font3;
-    font-size: variables.$font-m;
-    text-indent: variables.$spacing-xxl;
-    text-align: justify;
-    line-height: variables.$line-height-base;
-    padding-top: variables.$spacing-sm;
-    padding-bottom: variables.$spacing-md;
+    @include paragraph.paragraph;
   }
 
   &__imagem {
@@ -73,5 +56,21 @@
     color: #fff;
     font-size: 0.9rem;
     text-align: center;
+  }
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: variables.$cor6; // cor das setas (ajusta se quiser)
+  top: auto; // tira o posicionamento no topo
+  bottom: 10px; // posiciona as setas embaixo da imagem
+  width: 30px; // tamanho das setas
+  height: 30px;
+}
+
+@media (max-width: 768px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    bottom: 5px; // ajusta um pouco mais em telas pequenas
   }
 }

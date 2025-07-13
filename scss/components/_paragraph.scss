@@ -1,0 +1,11 @@
+@use "../utils/variables";
+@use "../utils/mixins";
+
+@mixin paragraph($indent: variables.$spacing-xxl, $align: justify, $padding: variables.$spacing-md, $height: variables.$line-height-base) {
+  font-family: variables.$font3;
+  font-size: variables.$font-m;
+  text-indent: $indent;
+  text-align: $align;
+  line-height: $height;
+  padding: $padding;
+}

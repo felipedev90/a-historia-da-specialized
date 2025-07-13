@@ -1,3 +1,5 @@
+
+/*FLEXBOX PADRÃO*/
 @mixin flex-center($justify: center, $align: center, $direction: row, $wrap: wrap) {
   display: flex;
   justify-content: $justify;
@@ -6,20 +8,22 @@
   flex-wrap: $wrap;
 }
 
-@mixin background-responsive($nome-imagem, $position: center center) {
+/*BACKGROUND*/
+@mixin background-responsive($nome-imagem, $size: cover, $position: center center) {
   background: url("../../image/#{$nome-imagem}.webp");
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-size: $size;
   background-position: $position;
+  background-repeat: no-repeat;
 }
 
+/*MEDIA QUERIES*/
 @mixin respond-to($breakpoint) {
   @if $breakpoint == sm {
-    @media (max-width: 510px) {
+    @media (max-width: 480px) {
       @content;
     }
   } @else if $breakpoint == md {
-    @media (max-width: 810px) {
+    @media (max-width: 768px) {
       @content;
     }
   } @else if $breakpoint == lg {

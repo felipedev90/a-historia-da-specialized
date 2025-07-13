@@ -1,5 +1,7 @@
 @use "../utils/variables";
 @use "../utils/mixins";
+@use "../components/title";
+@use "../components/paragraph";
 
 .evolucao {
   &__container {
@@ -18,33 +20,13 @@
       gap: 1rem;
       padding: 1rem;
     }
-    @include mixins.respond-to(md) {
-      max-width: 90%;
-      @include mixins.flex-center;
-      gap: 1rem;
-      padding: 1rem;
-    }
-    @include mixins.respond-to(sm) {
-      max-width: 90%;
-      @include mixins.flex-center;
-      gap: 1rem;
-      padding: 1rem;
-    }
   }
 
   &__title {
-    font-family: variables.$font2;
-    font-size: variables.$font-xxl;
-    color: variables.$cor5;
+    @include title.title($border: none);
     text-align: center;
-    font-weight: 900;
-    padding: variables.$spacing-md;
 
     @include mixins.respond-to(md) {
-      font-size: variables.$font-xl;
-    }
-
-    @include mixins.respond-to(sm) {
       font-size: variables.$font-xl;
     }
   }
@@ -74,54 +56,28 @@
     max-width: 100%;
     @include mixins.flex-center;
 
-    background: url("/image/evolucao_bg_img1900px.webp");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
+    @include mixins.background-responsive("evolucao_bg_img1900px");
 
     @include mixins.respond-to(lg) {
-      background: url("/image/evolucao_bg_img1024px.webp");
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center center;
+      min-height: 500px;
+      @include mixins.background-responsive("evolucao_bg_img1024px");
     }
 
     @include mixins.respond-to(md) {
-      background: url("/image/evolucao_bg_img890px.webp");
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center center;
+      @include mixins.background-responsive("evolucao_bg_img890px");
     }
 
     @include mixins.respond-to(sm) {
-      background: url("/image/evolucao_bg_img590px.webp");
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center center;
+      @include mixins.background-responsive("evolucao_bg_img590px");
     }
   }
 
   &__p {
+    @include paragraph.paragraph($height: 1.5);
     max-width: 40%;
-    font-family: variables.$font3;
     color: variables.$cor0;
-    font-size: variables.$font-m;
-    font-weight: 400;
-    text-indent: variables.$spacing-xxl;
-    text-align: justify;
-    line-height: 1.5;
-    padding: variables.$spacing-md;
 
     @include mixins.respond-to(lg) {
-      max-width: 100%;
-    }
-
-    @include mixins.respond-to(md) {
-      max-width: 100%;
-      text-align: center;
-    }
-
-    @include mixins.respond-to(sm) {
       max-width: 100%;
       text-align: center;
     }

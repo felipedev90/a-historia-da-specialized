@@ -3,29 +3,26 @@
 
 .footer {
   &__container {
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    grid-template-columns: repeat(3, minmax(200px, 1fr));
     width: 100%;
     height: auto;
     max-width: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+    gap: 2rem;
     padding: variables.$spacing-md;
-
     background-color: variables.$cor6;
+
+    @include mixins.respond-to(md) {
+      @include mixins.flex-center($direction: column);
+      text-align: center;
+      gap: 1rem;
+    }
   }
 
   &__textcontainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    flex-wrap: wrap;
-
-    &:not(:first-child) {
-      border-left: 1px solid variables.$cor0;
-    }
+    @include mixins.flex-center($direction: column);
   }
 
   &__p {
@@ -33,13 +30,13 @@
     font-size: variables.$font-s;
     color: variables.$cor0;
     text-align: center;
-    padding: variables.$spacing-md;
+    padding: variables.$spacing-xs;
   }
 
   &__autor {
-    font-family: variables.$font1;
+    font-family: variables.$font3;
     color: variables.$cor0;
-    font-weight: 400;
+    font-weight: 500;
     font-size: variables.$font-m;
   }
 
@@ -50,9 +47,8 @@
   }
 
   &__redessociais {
-    display: flex;
-    justify-content: center;
-    gap: 24px;
+    @include mixins.flex-center;
+    gap: 1.5rem;
     margin-bottom: 20px;
   }
 
@@ -64,7 +60,7 @@
 
   &__redessociais a:hover,
   &__link:hover {
-    transform: scale(1.2);
+    transform: scale(1.4);
     color: crimson;
   }
 }
