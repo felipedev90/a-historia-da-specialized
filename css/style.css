@@ -7,19 +7,19 @@
 
 @font-face {
   font-family: "Roboto-condensed";
-  src: url("../../fonts/RobotoCondensed-Regular.ttf") format("truetype");
+  src: url("../fonts/RobotoCondensed-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "ShadowsIntoLightTwo";
-  src: url("../../fonts/ShadowsIntoLightTwo.ttf") format("truetype");
+  src: url("../fonts/ShadowsIntoLightTwo.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "PoiretOne";
-  src: url("../../fonts/PoiretOne.ttf") format("truetype");
+  src: url("../fonts/PoiretOne.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -148,7 +148,7 @@ body {
   min-height: 100vh;
   gap: 4rem;
   padding: 4rem 1rem;
-  background: url("../../image/header1900px.webp");
+  background: url("../image/header1900px.webp");
   background-size: cover;
   background-position: center right;
   background-repeat: no-repeat;
@@ -161,7 +161,7 @@ body {
     flex-direction: column;
     flex-wrap: wrap;
     gap: 2rem;
-    background: url("../../image/header1024px.webp");
+    background: url("../image/header1024px.webp");
     background-size: cover;
     background-position: center right;
     background-repeat: no-repeat;
@@ -175,7 +175,7 @@ body {
     flex-direction: column;
     flex-wrap: wrap;
     gap: 1.8rem;
-    background: url("../../image/header890px.webp");
+    background: url("../image/header890px.webp");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -184,7 +184,7 @@ body {
 @media (max-width: 480px) {
   .home__container {
     gap: 1.5rem;
-    background: url("../../image/header590px.webp");
+    background: url("../image/header590px.webp");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -401,7 +401,7 @@ body {
   display: flex;
   padding: 16px;
   box-shadow: 0.3px 0.3px 5px #000000;
-  background: url("../../image/fundador_spz_logo_700px.webp");
+  background: url("../image/fundador_spz_logo_700px.webp");
   background-size: contain;
   background-position: center center;
   background-repeat: no-repeat;
@@ -421,7 +421,7 @@ body {
 @media (max-width: 768px) {
   .fundador__boxquote {
     flex-direction: column;
-    background: url("../../image/fundador_spz_logo_500px.webp");
+    background: url("../image/fundador_spz_logo_500px.webp");
     background-size: contain;
     background-position: center center;
     background-repeat: no-repeat;
@@ -430,7 +430,7 @@ body {
 }
 @media (max-width: 480px) {
   .fundador__boxquote {
-    background: url("../../image/fundador_spz_logo_400px.webp");
+    background: url("../image/fundador_spz_logo_400px.webp");
     background-size: contain;
     background-position: center center;
     background-repeat: no-repeat;
@@ -542,7 +542,7 @@ body {
   align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
-  background: url("../../image/evolucao_bg_img1900px.webp");
+  background: url("../image/evolucao_bg_img1900px.webp");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -550,7 +550,7 @@ body {
 @media (max-width: 1024px) {
   .evolucao__container-txt {
     min-height: 500px;
-    background: url("../../image/evolucao_bg_img1024px.webp");
+    background: url("../image/evolucao_bg_img1024px.webp");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -558,7 +558,7 @@ body {
 }
 @media (max-width: 768px) {
   .evolucao__container-txt {
-    background: url("../../image/evolucao_bg_img890px.webp");
+    background: url("../image/evolucao_bg_img890px.webp");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -566,7 +566,7 @@ body {
 }
 @media (max-width: 480px) {
   .evolucao__container-txt {
-    background: url("../../image/evolucao_bg_img590px.webp");
+    background: url("../image/evolucao_bg_img590px.webp");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -606,14 +606,14 @@ body {
   flex-direction: column;
   flex-wrap: wrap;
   padding: 48px;
-  background: url("../../image/curiosidades_bg_sworks_1900px.webp");
+  background: url("../image/curiosidades_bg_sworks_1900px.webp");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
 }
 @media (max-width: 1024px) {
   .curiosidades__container {
-    background: url("../../image/curiosidades_bg_sworks_1024px.webp");
+    background: url("../image/curiosidades_bg_sworks_1024px.webp");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -621,7 +621,7 @@ body {
 }
 @media (max-width: 768px) {
   .curiosidades__container {
-    background: url("../../image/curiosidades_bg_sworks_890px.webp");
+    background: url("../image/curiosidades_bg_sworks_890px.webp");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -630,7 +630,7 @@ body {
 }
 @media (max-width: 480px) {
   .curiosidades__container {
-    background: url("../../image/curiosidades_bg_sworks_590px.webp");
+    background: url("../image/curiosidades_bg_sworks_590px.webp");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -721,7 +721,7 @@ body {
   align-items: flex-start;
   flex-direction: row;
   flex-wrap: nowrap;
-  background: url("../../image/curiosidades_peter600px.webp");
+  background: url("../image/curiosidades_peter600px.webp");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -737,7 +737,7 @@ body {
 }
 @media (max-width: 768px) {
   .curiosidades__atleta1 {
-    background: url("../../image/curiosidades_peter600px.webp");
+    background: url("../image/curiosidades_peter600px.webp");
     background-size: cover;
     background-position: top center;
     background-repeat: no-repeat;
@@ -747,7 +747,7 @@ body {
 }
 @media (max-width: 480px) {
   .curiosidades__atleta1 {
-    background: url("../../image/curiosidades_peter400px.webp");
+    background: url("../image/curiosidades_peter400px.webp");
     background-size: cover;
     background-position: top center;
     background-repeat: no-repeat;
@@ -761,7 +761,7 @@ body {
   align-items: flex-start;
   flex-direction: row;
   flex-wrap: nowrap;
-  background: url("../../image/curiosidades_loic600px.webp");
+  background: url("../image/curiosidades_loic600px.webp");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -777,7 +777,7 @@ body {
 }
 @media (max-width: 768px) {
   .curiosidades__atleta2 {
-    background: url("../../image/curiosidades_loic600px.webp");
+    background: url("../image/curiosidades_loic600px.webp");
     background-size: cover;
     background-position: top center;
     background-repeat: no-repeat;
@@ -787,7 +787,7 @@ body {
 }
 @media (max-width: 480px) {
   .curiosidades__atleta2 {
-    background: url("../../image/curiosidades_loic400px.webp");
+    background: url("../image/curiosidades_loic400px.webp");
     background-size: cover;
     background-position: top center;
     background-repeat: no-repeat;
@@ -801,7 +801,7 @@ body {
   align-items: flex-start;
   flex-direction: row;
   flex-wrap: nowrap;
-  background: url("../../image/curiosidades_annika600px.webp");
+  background: url("../image/curiosidades_annika600px.webp");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -817,7 +817,7 @@ body {
 }
 @media (max-width: 768px) {
   .curiosidades__atleta3 {
-    background: url("../../image/curiosidades_annika600px.webp");
+    background: url("../image/curiosidades_annika600px.webp");
     background-size: cover;
     background-position: top center;
     background-repeat: no-repeat;
@@ -827,7 +827,7 @@ body {
 }
 @media (max-width: 480px) {
   .curiosidades__atleta3 {
-    background: url("../../image/curiosidades_annika400px.webp");
+    background: url("../image/curiosidades_annika400px.webp");
     background-size: cover;
     background-position: top center;
     background-repeat: no-repeat;
