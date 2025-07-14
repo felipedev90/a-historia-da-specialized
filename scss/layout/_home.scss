@@ -12,6 +12,8 @@
     min-height: 100vh;
     gap: 4rem;
     padding: 4rem 1rem;
+    position: relative;
+    
 
     @include mixins.background-responsive(
       "header1900px",
@@ -41,9 +43,11 @@
       gap: 1.5rem;
 
       @include mixins.background-responsive(
-        "header590px",
+        "header1900px",
         $position: center center
       );
+      position: relative;
+      z-index: 1;
     }
   }
 
@@ -72,7 +76,7 @@
   }
 
   &__p {
-    @include paragraph.paragraph ($indent: none);
+    @include paragraph.paragraph($indent: none);
     color: variables.$cor0;
   }
 

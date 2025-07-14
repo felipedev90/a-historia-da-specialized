@@ -39,9 +39,14 @@ body {
 /*FLEXBOX PADRÃO*/
 /*BACKGROUND*/
 /*MEDIA QUERIES*/
+header {
+  position: relative;
+  z-index: 9999;
+}
+
 .nav__container {
   position: relative;
-  z-index: 1000;
+  z-index: 10000;
   height: fit-content;
   width: 100%;
   display: flex;
@@ -119,7 +124,6 @@ body {
   }
 }
 .nav__link:hover {
-  color: #590212;
   transform: scale(1.2);
 }
 .nav__link::after {
@@ -148,6 +152,7 @@ body {
   min-height: 100vh;
   gap: 4rem;
   padding: 4rem 1rem;
+  position: relative;
   background: url("../image/header1900px.webp");
   background-size: cover;
   background-position: center right;
@@ -184,10 +189,12 @@ body {
 @media (max-width: 480px) {
   .home__container {
     gap: 1.5rem;
-    background: url("../image/header590px.webp");
+    background: url("../image/header1900px.webp");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
+    position: relative;
+    z-index: 1;
   }
 }
 .home__texto {
@@ -324,29 +331,31 @@ body {
   font-weight: 600;
   color: #f2f2f2;
   position: absolute;
-  bottom: 20px;
+  bottom: 5px;
   padding: 8px 12px;
   background: rgba(0, 0, 0, 0.6);
-  color: #fff;
+  color: #f2f2f2;
   font-size: 0.9rem;
   text-align: center;
 }
 
+/*
 .swiper-button-next,
 .swiper-button-prev {
-  color: #000000;
-  top: auto;
-  bottom: 10px;
-  width: 30px;
+  color: variables.$cor6; // cor das setas (ajusta se quiser)
+  top: auto; // tira o posicionamento no topo
+  bottom: 10px; // posiciona as setas embaixo da imagem
+  width: 30px; // tamanho das setas
   height: 30px;
 }
 
 @media (max-width: 768px) {
   .swiper-button-next,
   .swiper-button-prev {
-    bottom: 5px;
+    bottom: 5px; // ajusta um pouco mais em telas pequenas
   }
 }
+*/
 .fundador__container {
   display: flex;
   justify-content: center;
@@ -405,7 +414,6 @@ body {
   background-size: contain;
   background-position: center center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
 }
 @media (max-width: 1024px) {
   .fundador__boxquote {
@@ -425,16 +433,14 @@ body {
     background-size: contain;
     background-position: center center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
   }
 }
 @media (max-width: 480px) {
   .fundador__boxquote {
     background: url("../image/fundador_spz_logo_400px.webp");
     background-size: contain;
-    background-position: center center;
+    background-position: top top;
     background-repeat: no-repeat;
-    background-attachment: fixed;
   }
 }
 .fundador__p {
@@ -566,7 +572,7 @@ body {
 }
 @media (max-width: 480px) {
   .evolucao__container-txt {
-    background: url("../image/evolucao_bg_img590px.webp");
+    background: url("../image/evolucao_bg_img1900px.webp");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -630,7 +636,7 @@ body {
 }
 @media (max-width: 480px) {
   .curiosidades__container {
-    background: url("../image/curiosidades_bg_sworks_590px.webp");
+    background: url("../image/curiosidades_bg_sworks_1900px.webp");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -751,7 +757,7 @@ body {
     background-size: cover;
     background-position: top center;
     background-repeat: no-repeat;
-    min-height: 150px;
+    min-height: 200px;
     min-width: 350px;
   }
 }
@@ -791,7 +797,7 @@ body {
     background-size: cover;
     background-position: top center;
     background-repeat: no-repeat;
-    min-height: 150px;
+    min-height: 200px;
     min-width: 350px;
   }
 }
@@ -831,7 +837,7 @@ body {
     background-size: cover;
     background-position: top center;
     background-repeat: no-repeat;
-    min-height: 150px;
+    min-height: 200px;
     min-width: 350px;
   }
 }

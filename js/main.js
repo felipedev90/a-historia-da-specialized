@@ -7,14 +7,17 @@ toggleButton.addEventListener("click", () => {
   navLista.classList.toggle("active");
 });
 
-ScrollReveal().reveal("*:not(footer):not(footer *):not(nav):not(nav *)", {
-  origin: "bottom",
-  distance: "60px",
-  duration: 600,
-  delay: 100,
-  easing: "ease-out",
-  reset: false,
-});
+ScrollReveal().reveal(
+  "*:not(footer):not(footer *):not(.nav__container):not(header *):not(#galeria):not(#galeria *)",
+  {
+    origin: "bottom",
+    distance: "60px",
+    duration: 600,
+    delay: 100,
+    easing: "ease-out",
+    reset: false,
+  }
+);
 
 lightGallery(document.querySelector(".swiper-wrapper"), {
   selector: "a",

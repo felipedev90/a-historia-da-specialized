@@ -1,6 +1,10 @@
-
 /*FLEXBOX PADRÃO*/
-@mixin flex-center($justify: center, $align: center, $direction: row, $wrap: wrap) {
+@mixin flex-center(
+  $justify: center,
+  $align: center,
+  $direction: row,
+  $wrap: wrap
+) {
   display: flex;
   justify-content: $justify;
   align-items: $align;
@@ -9,7 +13,11 @@
 }
 
 /*BACKGROUND*/
-@mixin background-responsive($nome-imagem, $size: cover, $position: center center) {
+@mixin background-responsive(
+  $nome-imagem,
+  $size: cover,
+  $position: center center
+) {
   background: url("../image/#{$nome-imagem}.webp");
   background-size: $size;
   background-position: $position;

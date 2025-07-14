@@ -21,7 +21,7 @@
     }
 
     @include mixins.respond-to(sm) {
-      @include mixins.background-responsive("curiosidades_bg_sworks_590px");
+      @include mixins.background-responsive("curiosidades_bg_sworks_1900px");
     }
   }
 
@@ -101,7 +101,7 @@
         "curiosidades_peter400px",
         $position: top center
       );
-      min-height: 150px;
+      min-height: 200px;
       min-width: 350px;
     }
   }
@@ -136,7 +136,7 @@
         "curiosidades_loic400px",
         $position: top center
       );
-      min-height: 150px;
+      min-height: 200px;
       min-width: 350px;
     }
   }
@@ -171,7 +171,7 @@
         "curiosidades_annika400px",
         $position: top center
       );
-      min-height: 150px;
+      min-height: 200px;
       min-width: 350px;
     }
   }

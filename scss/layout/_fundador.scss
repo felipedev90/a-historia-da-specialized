@@ -47,7 +47,6 @@
       $size: contain,
       $position: center center
     );
-    background-attachment: fixed;
 
     @include mixins.respond-to(lg) {
       @include mixins.flex-center;
@@ -61,16 +60,14 @@
         $size: contain,
         $position: center center
       );
-      background-attachment: fixed;
     }
 
     @include mixins.respond-to(sm) {
       @include mixins.background-responsive(
         "fundador_spz_logo_400px",
         $size: contain,
-        $position: center center
+        $position: top top
       );
-      background-attachment: fixed;
     }
   }
 

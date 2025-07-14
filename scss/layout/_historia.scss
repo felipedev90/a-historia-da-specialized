@@ -50,15 +50,16 @@
     font-weight: 600;
     color: variables.$cor0;
     position: absolute;
-    bottom: 20px;
+    bottom: 5px;
     padding: 8px 12px;
     background: rgba(0, 0, 0, 0.6);
-    color: #fff;
+    color: variables.$cor0;
     font-size: 0.9rem;
     text-align: center;
   }
 }
 
+/*
 .swiper-button-next,
 .swiper-button-prev {
   color: variables.$cor6; // cor das setas (ajusta se quiser)
@@ -74,3 +75,4 @@
     bottom: 5px; // ajusta um pouco mais em telas pequenas
   }
 }
+*/

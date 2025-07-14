@@ -68,7 +68,7 @@
     }
 
     @include mixins.respond-to(sm) {
-      @include mixins.background-responsive("evolucao_bg_img590px");
+      @include mixins.background-responsive("evolucao_bg_img1900px");
     }
   }
 
